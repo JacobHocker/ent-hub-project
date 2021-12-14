@@ -1,0 +1,15 @@
+/* The centering for the whole log in page */
+.login-area{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
+
+.login-page-logo{
+    width: 600px;
+    padding-bottom: 0.5rem;
+}
