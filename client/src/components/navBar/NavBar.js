@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import './NavBar.scss';
 import  image1  from "../../assets/pictures/eh-nav-logo-large.png";
 
@@ -24,8 +24,8 @@ function NavBar({ user, setUser }) {
       <div className='navigation-container'>
         <div className="navigation-items">
           <nav>
-            <Link className='nav-link' to="/">Home</Link>{" "}|
-            <Link className='nav-link' to="/movies">Movie List</Link>{" "}|
+            <NavLink className='nav-link' to="/">Home</NavLink>{" "}|
+            <NavLink className='nav-link' to="/movies">Movie List</NavLink>{" "}|
           </nav>
         </div>
         <div className="user-info-display">

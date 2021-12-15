@@ -11,7 +11,7 @@ $color-white: rgb(190, 31, 31);
 }
 
 .login-input{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: -0.2px;
     font-size: $ruler;
     border: 0;
@@ -19,7 +19,7 @@ $color-white: rgb(190, 31, 31);
     border-radius: $ruler*20;
     padding: $ruler;
     background-color:$color-bg;
-    text-shadow: 1px 1px 0 $color-white;
+    //text-shadow: 1px 1px 0 $color-white;
     margin-bottom: $ruler*1.5;
     margin-right: $ruler/2;
     box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
@@ -35,7 +35,7 @@ $color-white: rgb(190, 31, 31);
 }
 
 .login-button{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: -0.2px;
     font-size: $ruler;
     border: 0;
@@ -44,7 +44,7 @@ $color-white: rgb(190, 31, 31);
     border-radius: $ruler*20;
     padding: $ruler;
     background-color:$color-bg;
-    text-shadow: 1px 1px 0 $color-white;
+   // text-shadow: 1px 1px 0 $color-white;
     margin-bottom: $ruler*1.5;
     margin-right: $ruler/2;
     box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-shadow;

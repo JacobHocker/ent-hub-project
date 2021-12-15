@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   
   
+  resources :movie_reviews, only: [:index, :show, :create]
+  resources :genres, only: [:index, :show, :create]
+  resources :directors, only: [:index, :show, :create]
   resources :actors, only: [:index, :show, :create]
-  resources :movies, only: [:index, :show]
+  resources :movies, only: [:index, :show, :create]
   
-  resources :movies, only: [:show] do 
-    resources :actors, only: [:show, :index]
-  end
+  
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"

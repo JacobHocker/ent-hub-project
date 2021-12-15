@@ -6,7 +6,7 @@ class CreateActors < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :brief_history
       t.string :accomplishments
-      t.time :birth_date 
+      t.string :birth_date 
     end
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_13_195835) do
+ActiveRecord::Schema.define(version: 2021_12_15_175438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_195835) do
     t.string "name"
     t.string "brief_history"
     t.string "accomplishments"
-    t.time "birth_date"
+    t.string "birth_date"
   end
 
   create_table "actors_movies", force: :cascade do |t|
@@ -33,6 +33,47 @@ ActiveRecord::Schema.define(version: 2021_12_13_195835) do
     t.index ["movie_id"], name: "index_actors_movies_on_movie_id"
   end
 
+  create_table "directors", force: :cascade do |t|
+    t.string "director_image"
+    t.string "name"
+    t.string "birth_date"
+    t.string "brief_history"
+    t.string "accomplishments"
+  end
+
+  create_table "directors_movies", force: :cascade do |t|
+    t.bigint "director_id"
+    t.bigint "movie_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["director_id"], name: "index_directors_movies_on_director_id"
+    t.index ["movie_id"], name: "index_directors_movies_on_movie_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "genre_picture"
+    t.string "name"
+    t.string "description"
+  end
+
+  create_table "genres_movies", force: :cascade do |t|
+    t.bigint "genre_id"
+    t.bigint "movie_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_genres_movies_on_genre_id"
+    t.index ["movie_id"], name: "index_genres_movies_on_movie_id"
+  end
+
+  create_table "movie_reviews", force: :cascade do |t|
+    t.string "review_content"
+    t.float "movie_score"
+    t.integer "movie_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string "movie_poster"
     t.string "movie_trailer"
@@ -40,7 +81,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_195835) do
     t.string "summary"
     t.string "awards"
     t.integer "run_time"
-    t.time "release_date"
+    t.string "release_date"
   end
 
   create_table "users", force: :cascade do |t|

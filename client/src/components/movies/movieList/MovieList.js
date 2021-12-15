@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 function MovieList({ title, moviePoster, movie }) { 
@@ -10,9 +10,9 @@ function MovieList({ title, moviePoster, movie }) {
             <img src={moviePoster} alt={title} className='movie-list-image' />
             <h1>{title}</h1>
             <button className='link-to-movie'>
-               <Link to={`/movies/${movieId}`}> 
+               <NavLink to={`/movies/${movieId}`}> 
                 Learn more!
-                </Link>
+                </NavLink>
             </button>
         </div>
     )

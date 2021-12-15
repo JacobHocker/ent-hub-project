@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    # has_many :movie_reviews
+    has_many :movie_reviews 
     has_secure_password 
 
     validates :username, presence: true, uniqueness: true 

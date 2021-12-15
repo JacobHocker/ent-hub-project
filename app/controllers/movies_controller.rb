@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
     # GET /movies
     def index 
         movies = Movie.all
-        render :json => movies.to_json( :include => [:actors] )
+        render :json => movies.to_json( :include => [:actors, :directors, :genres, :movie_reviews] )
     end
      
     # GET /movies/:id
@@ -15,14 +15,15 @@ class MoviesController < ApplicationController
         end
     end
 
-    def actors_index 
-        movie = Movie.find(params[:id])
-        actors = movie.actors 
-        render json: actors, include: :movie 
+    # POST /movies
+    def create 
+        movie = Movie.create!(movie_params)
+        render json: movie, status: :created 
     end
 
-    def actor 
-        actor = Actor.find(params[:id])
-        render json: actor, include: :movie
+    private  
+
+    def movie_params  
+        params.permit(:movie_poster, :movie_trailer, :title, :summary, :awards, :run_time, :release_date)
     end
 end

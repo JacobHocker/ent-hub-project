@@ -1,13 +1,8 @@
 class ActorsController < ApplicationController
     # GET /actors
     def index 
-        if params[:id]
-            movie = Movie.find(params[:id])
-            actors = movie.actors 
-        else   
-            actors = Actor.all 
-        end
-        render json: actors, include: :movies 
+        actors = Actor.all
+        render :json => actors.to_json( :include => [:movies] )
     end
 
     # GET /actors/:id
@@ -29,6 +24,6 @@ class ActorsController < ApplicationController
     private 
 
     def actor_params
-        params.permit(:actor_image, :name, :brief_history, :accomplishments, :birth_date)
+        params.permit(:actor_image, :actor_video, :name, :brief_history, :accomplishments, :birth_date)
     end
 end

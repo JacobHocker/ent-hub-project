@@ -1,4 +1,6 @@
 // Goes from left to right on the page
+$nav-white: azure;
+
 .eh-logo-nav{
     width: 8rem;
     margin-right: 3rem;
@@ -26,12 +28,17 @@
 
 .nav-link{
     padding-left: 2rem;
+    font-size: 1.15rem;
     padding-right: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-appearance: none;
+    color: $nav-white;
+    height: 0.2rem;
     
-    &hover{
+    
+    &:hover{
         background-color: rgb(116, 17, 17);
-        color:azure;
+        
     }
 }
 
