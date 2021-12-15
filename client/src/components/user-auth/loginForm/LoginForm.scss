@@ -1,4 +1,74 @@
-.login-form {
+$ruler: 18px;
+$color-red: rgb(51, 5, 5);
+$color-bg: #ebecf0;
+$color-shadow: #5c5c5c;
+$color-white: rgb(190, 31, 31);
+
+
+.login-form{
     display: flex;
     flex-direction: column;
+}
+
+.login-input{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -0.2px;
+    font-size: $ruler;
+    border: 0;
+    outline: 0;
+    border-radius: $ruler*20;
+    padding: $ruler;
+    background-color:$color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+    margin-bottom: $ruler*1.5;
+    margin-right: $ruler/2;
+    box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:focus {
+        box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+    }
+}
+
+.login-button{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -0.2px;
+    font-size: $ruler;
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: $ruler*20;
+    padding: $ruler;
+    background-color:$color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+    margin-bottom: $ruler*1.5;
+    margin-right: $ruler/2;
+    box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-shadow;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:focus {
+        box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+    }
+    color:#61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 3px $color-white,  5px 5px 3px $color-shadow;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+  
+  &:hover {
+    box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  }
+  
+  &:active {
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
 }

@@ -16,23 +16,27 @@ function Login({ onLogin }) {
           <>
             <LoginForm onLogin={onLogin} />
             <br />
-            <p>
-              Don't have an account? &nbsp;
+            <div className="sign-up-container">
+              <h3>
+                Don't have an account? &nbsp;
+              </h3>
               <button className="sign-up-button" onClick={() => setShowLogin(false)}>
                 Sign Up
               </button>
-            </p>
+            </div>
           </>
         ) : (
           <div className='sign-up-click'>
             <SignUpForm onLogin={onLogin} />
             <br />
-            <p>
-              Already have an account? &nbsp;
+            <div className="already-account">
+              <h3>
+                Already have an account? &nbsp;
+              </h3>
               <button className="login-button" onClick={() => setShowLogin(true)}>
                 Log In
               </button>
-            </p>
+            </div>
           </div>
         )}
       </div>

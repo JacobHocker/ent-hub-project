@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './LoginForm.js';
+import './LoginForm.scss';
 
 function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -29,7 +29,7 @@ function LoginForm({ onLogin }) {
   return (
     <form onSubmit={handleSubmit} className="login-form">
       <div className="username-login">
-        <label htmlFor="username">Username: </label>
+        <label htmlFor="username"></label>
         <input
           className="login-input"
           placeholder="Username"
@@ -41,7 +41,7 @@ function LoginForm({ onLogin }) {
         />
       </div>
       <div className="password-login">
-        <label htmlFor="password">Password: </label>
+        <label htmlFor="password"></label>
         <input
           className="login-input"
           placeholder="Password"

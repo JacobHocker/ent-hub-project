@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './NavBar.scss';
+import  image1  from "../../assets/pictures/eh-nav-logo-large.png";
 
 
 
@@ -11,23 +13,29 @@ function NavBar({ user, setUser }) {
       }
     });
   }
-
+  
   return (
-    <div className='navbar'>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
+    <div className="navbar-whole-container">
       <nav>
-        <button>
-        <Link to="/movies">Movie List</Link>
-        </button>
-        <button  onClick={handleLogoutClick}>
-          Logout
-        </button>
+        <Link to="/">
+          <img src={image1} className="eh-logo-nav" alt="eh-logo" />
+        </Link>
       </nav>
-      <img src={user.image} alt={user.username} />
-      <h1>{user.username}</h1>
-      <p>{user.bio}</p>
+      <div className='navigation-container'>
+        <div className="navigation-items">
+          <nav>
+            <Link className='nav-link' to="/">Home</Link>{" "}|
+            <Link className='nav-link' to="/movies">Movie List</Link>{" "}|
+          </nav>
+        </div>
+        <div className="user-info-display">
+          <img className="user-picture" src={user.image_url} alt={user.username} />
+          <h4 className="username-display">{user.username}</h4>
+          <button  className="log-out-button" onClick={handleLogoutClick}>
+              Logout
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
