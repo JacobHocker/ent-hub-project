@@ -9,7 +9,7 @@ class GenresController < ApplicationController
     def show 
         genre = Genre.find_by(id: params[:id])
         if genre 
-            render json: genre
+            render :json => genre.to_json( :include => [:movies] )
         else  
             render json: { error: 'Genre not found' }, status: :not_found
         end

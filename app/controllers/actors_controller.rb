@@ -9,7 +9,7 @@ class ActorsController < ApplicationController
     def show 
         actor = Actor.find_by(id: params[:id])
         if actor
-            render json: actor
+            render :json => actor.to_json( :include => [:movies] ) 
         else  
             render json: { error: 'Actor not found' }, status: :not_found
         end

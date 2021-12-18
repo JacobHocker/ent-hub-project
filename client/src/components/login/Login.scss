@@ -1,9 +1,10 @@
 /* The centering for the whole log in page */
+@use '../../assets/partials/colors';
 $ruler: 18px;
-$color-red: rgb(51, 5, 5);
-$color-bg: #ebecf0;
-$color-shadow: #5c5c5c;
-$color-white: rgb(190, 31, 31);
+$color-red: colors.$gold;
+$color-bg: colors.$white;
+$color-shadow: colors.$dark-grey;
+$color-white: colors.$light-grey;
 
 .login-area{
     position: absolute;
@@ -34,7 +35,7 @@ $color-white: rgb(190, 31, 31);
     font-size: $ruler;
     border-radius: $ruler*20;
     padding: $ruler;
-    background-color:$color-bg;
+    background-color:$color-red;
    // text-shadow: 1px 1px 0 $color-white;
     margin-bottom: $ruler*1.5;
     margin-right: $ruler/2;

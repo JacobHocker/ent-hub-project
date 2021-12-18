@@ -13,28 +13,26 @@ function NavBar({ user, setUser }) {
       }
     });
   }
-  
+ 
   return (
-    <div className="navbar-whole-container">
+    <div className="navbar-container">
       <nav>
         <Link to="/">
           <img src={image1} className="eh-logo-nav" alt="eh-logo" />
         </Link>
       </nav>
-      <div className='navigation-container'>
-        <div className="navigation-items">
-          <nav>
+      <div className='nav-display-container'>
+          <nav className='nav-items'>
             <NavLink className='nav-link' to="/">Home</NavLink>{" "}|
             <NavLink className='nav-link' to="/movies">Movie List</NavLink>{" "}|
           </nav>
-        </div>
-        <div className="user-info-display">
-          <img className="user-picture" src={user.image_url} alt={user.username} />
-          <h4 className="username-display">{user.username}</h4>
-          <button  className="log-out-button" onClick={handleLogoutClick}>
-              Logout
-          </button>
-        </div>
+      </div>
+      <div className="user-info-container">
+        <img className="user-pic" src={user.image_url} alt={user.username} />
+        <h4 className="username">{user.username}</h4>
+        <button  className="log-out-button" onClick={handleLogoutClick}>
+            Logout
+        </button>
       </div>
     </div>
   );

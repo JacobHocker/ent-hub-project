@@ -9,7 +9,7 @@ class DirectorsController < ApplicationController
     def show 
         director = Director.find_by(id: params[:id])
         if director 
-            render json: director
+            render :json => director.to_json( :include => [:movies] )
         else  
             render json: { error: 'Director not found' }, status: :not_found
         end

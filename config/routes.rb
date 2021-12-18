@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :actors, only: [:index, :show, :create]
   resources :movies, only: [:index, :show, :create]
   
-  
+  resources :movies, only: [:show] do 
+    resources :actors, only: [:show, :index]
+  end
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"

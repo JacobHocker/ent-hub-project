@@ -1,0 +1,15 @@
+.movie-info-display-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-info-poster-display{
+    width: 20rem;
+}
+
+.movie-trailer-display{
+    margin: 2rem 2rem 2rem 2rem;
+    width: 36rem;
+    height: 22rem;
+}

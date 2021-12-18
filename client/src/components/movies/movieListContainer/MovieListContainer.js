@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MovieList from "../movieList/MovieList";
+import './MovieListContainer.scss'
 
 
 function MovieListContainer() {
@@ -11,15 +12,15 @@ function MovieListContainer() {
         .then((movies) =>  setMovies(movies))
     }, [])
 
-
+    
 
   
     const moviesToDisplay = movies.map((movie) =>  (
-        <MovieList
+        <MovieList 
             key={movie.id}
             title={movie.title}
             moviePoster={movie.movie_poster}
-            movieId={movie.id}
+            movieSummary={movie.summary}
             movie={movie}
         />
 
@@ -27,7 +28,7 @@ function MovieListContainer() {
 
    
     return(
-        <div className='movie-display-list'>
+        <div className='movie-list-container'>
             {moviesToDisplay}
         </div>
     )
