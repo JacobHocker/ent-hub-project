@@ -8,6 +8,12 @@
     width: 20rem;
 }
 
+.movie-display-information-container{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .movie-trailer-display{
     margin: 2rem 2rem 2rem 2rem;
     width: 36rem;

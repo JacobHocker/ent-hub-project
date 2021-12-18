@@ -30,16 +30,26 @@ function MovieInformationDisplay() {
                     title='Movie Trailer'
                 />
                 <div className="movie-display-information-container">
-                    <h4>Movie Summary: </h4>
-                    <p>{singleMovie.summary}</p>
-                    <h4>Notable Awards: </h4>
-                    <p>{singleMovie.awards}</p>
-                    <h4>Release Date: </h4>
-                    <p>{singleMovie.release_date}</p>
+                    <div className="movie-display-summary">
+                        <h2>Movie Summary: </h2>
+                        <p>{singleMovie.summary}</p>
+                    </div>
+                    <>
+                    <div className="movie-display-awards">
+                        <h2>Notable Awards: </h2>
+                        <p>{singleMovie.awards}</p>
+                    </div>
+                    </>
+                    <>
+                    <div className="movie-display-release-date">
+                        <h2>Release Date: </h2>
+                        <p>{singleMovie.release_date}</p>
+                    </div>
+                    </>
                 </div>
             </div>
             <div className="actor-display-card-container">
-                <h2>Cast List:</h2>
+                <h1>Cast List:</h1>
                 <MovieActorDisplay movieId={singleMovie.id} />
             </div>
         </div>
