@@ -6,8 +6,8 @@ function Home() {
     return(
     <div className='home'>
       <main>
-        <h2>Entertainment Hub</h2>
-        <h4>The one stop shop for all your entertainment info needs!</h4>
+        <h2>Welcome to Entertainment Hub</h2>
+        <h3>The one stop shop for all your entertainment database needs!</h3>
       </main>
     </div>
     )

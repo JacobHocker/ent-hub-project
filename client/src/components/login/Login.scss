@@ -1,10 +1,12 @@
 /* The centering for the whole log in page */
 @use '../../assets/partials/colors';
+
+
 $ruler: 18px;
-$color-red: colors.$gold;
+$color-red: colors.$light-grey;
 $color-bg: colors.$white;
 $color-shadow: colors.$dark-grey;
-$color-white: colors.$light-grey;
+$color-white: colors.$gold;
 
 .login-area{
     position: absolute;
@@ -16,9 +18,10 @@ $color-white: colors.$light-grey;
     margin: -100px 0 0 -150px;
 }
 
-.login-page-logo{
-    width: 600px;
-    padding-bottom: 0.5rem;
+.login-page-logo{ 
+  width: 30rem;
+  padding-bottom: 0.2rem;
+  
 }
 
 .sign-up-container{

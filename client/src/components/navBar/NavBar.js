@@ -23,14 +23,17 @@ function NavBar({ user, setUser }) {
       </nav>
       <div className='nav-display-container'>
           <nav className='nav-items'>
-            <NavLink className='nav-link' to="/">Home</NavLink>{" "}|
-            <NavLink className='nav-link' to="/movies">Movie List</NavLink>{" "}|
+            <NavLink className='nav-link' to="/">Home</NavLink>
+            <NavLink className='nav-link' to="/movies">Movies</NavLink>
+            <nav className="nav-link">Placeholder</nav>
+            <nav className="nav-link">Placeholder</nav>
+            <nav className="nav-link">Placeholder</nav>
           </nav>
       </div>
-      <div className="user-info-container">
-        <img className="user-pic" src={user.image_url} alt={user.username} />
-        <h4 className="username">{user.username}</h4>
-        <button  className="log-out-button" onClick={handleLogoutClick}>
+      <div className="nav-user-info-container">
+        <img className="nav-user-pic" src={user.image_url} alt={user.username} />
+        <h4 className="nav-username">{user.username}</h4>
+        <button  className="nav-log-out" onClick={handleLogoutClick}>
             Logout
         </button>
       </div>

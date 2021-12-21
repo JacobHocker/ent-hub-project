@@ -30,26 +30,32 @@ function MovieInformationDisplay() {
                     title='Movie Trailer'
                 />
                 <div className="movie-display-information-container">
-                    <div className="movie-display-summary">
-                        <h2>Movie Summary: </h2>
-                        <p>{singleMovie.summary}</p>
+                    <div className="movie-display">
+                        <h2 className="movie-info-text">Movie Summary: </h2>
+                        <h4 className="movie-p">{singleMovie.summary}</h4>
                     </div>
                     <>
-                    <div className="movie-display-awards">
-                        <h2>Notable Awards: </h2>
-                        <p>{singleMovie.awards}</p>
+                    <div className="movie-display">
+                        <h2 className="movie-info-text">Release Date: </h2>
+                        <h4 className="movie-p">{singleMovie.release_date}</h4>
                     </div>
                     </>
                     <>
-                    <div className="movie-display-release-date">
-                        <h2>Release Date: </h2>
-                        <p>{singleMovie.release_date}</p>
+                    <div className="movie-display">
+                        <h2 className="movie-info-text">Run Time: </h2>
+                        <h4 className="movie-p">{singleMovie.run_time} Minutes</h4>
+                    </div>
+                    </>
+                    <>
+                    <div className="movie-display">
+                        <h2 className="movie-info-text">Notable Awards: </h2>
+                        <h4 className="movie-p">{singleMovie.awards}</h4>
                     </div>
                     </>
                 </div>
             </div>
             <div className="actor-display-card-container">
-                <h1>Cast List:</h1>
+                <h1 className="movie-info-text">Cast List:</h1>
                 <MovieActorDisplay movieId={singleMovie.id} />
             </div>
         </div>

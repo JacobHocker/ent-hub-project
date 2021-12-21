@@ -1,3 +1,5 @@
+@use '../../../assets/partials/colors';
+
 .movie-info-display-container{
     display: flex;
     flex-direction: column;
@@ -8,10 +10,24 @@
     width: 20rem;
 }
 
-.movie-display-information-container{
+.movie-display{
     display: flex;
-    flex-direction: column;
+    align-items: baseline;
+    margin-left: 1rem;
 }
+
+.movie-p{
+    font-size: 1.25rem;
+}
+
+
+.movie-info-text{
+    color: colors.$gold;
+    font-size: 2.5rem;
+    padding-right: 3rem;
+}
+
+
 
 
 .movie-trailer-display{
