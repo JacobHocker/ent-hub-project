@@ -18,9 +18,10 @@ puts "Creating Actors..."
 puts 
 
 elijah_wood = Actor.create!(actor_image: "https://m.media-amazon.com/images/M/MV5BMTM0NDIxMzQ5OF5BMl5BanBnXkFtZTcwNzAyNTA4Nw@@._V1_.jpg", actor_video: "https://www.youtube.com/embed/wLnoXkDZNNI", name: "Elijah Wood", brief_history: "Elijah Wood is an American actor and producer. He is best known for his portrayal of Frodo Baggins in the Lord of the Rings film trilogy and The Hobbit: An Unexpected Journey. Wood made his film debut with a small part in Back to the Future Part II.", accomplishments: "29 wins & 48 nominations", birth_date: "January 28, 1981" )
-sean_bean = Actor.create!(actor_image: "https://m.media-amazon.com/images/M/MV5BMTkzMzc4MDk5OF5BMl5BanBnXkFtZTcwODg3MjUxNw@@._V1_.jpg", actor_video: "https://www.youtube.com/embed/dHHaKtVdfa0", name: 'Sean Bean', brief_history: "Sean Bean is an English actor. After graduating from the Royal Academy of Dramatic Art, Bean made his professional debut in a theatre production of Romeo and Juliet in 1983", accomplishments: "17 wins & 14 nominations", birth_date: "April 17, 1959" )
+sean_astin = Actor.create!(actor_image: "https://www.gannett-cdn.com/authoring/2019/05/16/PROC/33097709-2587-4e43-a3a1-654bd4bd4bb5-ROCBrd_03-31-2016_DandC_1_B006__2016_03_30_IMG_GettyImages-46374404_1_1_0KDTT0EH_L786490466_IMG_GettyImages-46374404_1_1_0KDTT0EH.jpg", actor_video: "https://www.youtube.com/embed/A_u9Hc0Yg1o", name: "Sean Astin", brief_history: "Sean Patrick Astin is an American actor. His acting roles include Samwise Gamgee in The Lord of the Rings trilogy, Mikey Walsh in The Goonies, Daniel Ruettiger in Rudy, Doug ...", accomplishments: "Nominated for 1 Oscar. Another 24 wins & 27 nominations.", birth_date: "February 25, 1971")
+dominic_monaghan = Actor.create!(actor_image: "https://i.guim.co.uk/img/media/b24fbef7a9992de4d98fe6f835fdf520930dcef0/0_55_2623_1573/master/2623.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=f9bf6edf143f0869836b8329279c8d48", actor_video: "https://www.youtube.com/embed/TE2n2YbGqWE", name: "Dominic Monaghan", brief_history: "Dominic Monaghan is a British actor. He is best known for playing Meriadoc 'Merry' Brandybuck in Peter Jackson's film trilogy The Lord of the Rings, and Charlie Pace on J. J. Abrams' television show Lost.", accomplishments: "Nominated for 1 Primetime Emmy. Another 10 wins & 16 nominations", birth_date: "December 8, 1976")
 billy_boyd =Actor.create!(actor_image: "https://vz.cnwimg.com/thumb-1200x/wp-content/uploads/2014/06/GettyImages-459789806.jpg", actor_video: "https://www.youtube.com/embed/07tyg4JZWkA", name: 'Billy Boyd', brief_history: "William Nathan Boyd is a Scottish actor and musician. He played Peregrin 'Pippin' Took in Peter Jackson's epic film trilogy The Lord of the Rings, Barret Bonden in Master and Commander: The Far Side of the World and Glen/Glenda in Seed of Chucky", accomplishments: "9 wins & 10 nominations", birth_date: "August 28, 1968")
-
+sean_bean = Actor.create!(actor_image: "https://m.media-amazon.com/images/M/MV5BMTkzMzc4MDk5OF5BMl5BanBnXkFtZTcwODg3MjUxNw@@._V1_.jpg", actor_video: "https://www.youtube.com/embed/dHHaKtVdfa0", name: 'Sean Bean', brief_history: "Sean Bean is an English actor. After graduating from the Royal Academy of Dramatic Art, Bean made his professional debut in a theatre production of Romeo and Juliet in 1983", accomplishments: "17 wins & 14 nominations", birth_date: "April 17, 1959" )
 ### WHERE THE DIRECTORS ARE SEEDED
 puts "Creating Directors..."
 puts 
@@ -38,7 +39,7 @@ fantasy = Genre.create!(name: "Fantasy")
 puts "Associating All Data..."
 puts 
 
-lotr_fellowship.actors << [elijah_wood, sean_bean, billy_boyd] 
+lotr_fellowship.actors << [elijah_wood, sean_astin, dominic_monaghan, billy_boyd, sean_bean] 
 lotr_fellowship.directors << [peter_jackson] 
 lotr_fellowship.genres << [fantasy] 
 

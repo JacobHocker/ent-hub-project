@@ -80,6 +80,21 @@ function MovieActorDisplay({ movieId }) {
                 </div>   
             </div>
             )}
+            {index === current + 3 && (
+            <div className='actor-movie-display-card'>
+                <img className='actor-movie-display-image' src={actor.actor_image} alt={actor.name} />
+                <div className='actor-movie-display-info'>
+                    <h2>{actor.name}</h2>
+                </div>
+                <div className='actor-movie-display-summary'>
+                    <h2>Actor History:</h2>
+                    <p>{actor.brief_history}</p>
+                    <button>
+                        Learn More!
+                    </button>
+                </div>   
+            </div>
+            )}
         </div>
     ))
     
