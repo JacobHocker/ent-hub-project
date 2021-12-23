@@ -9,7 +9,8 @@ puts
 ### WHERE THE MOVIES ARE SEEDED
 puts "Creating Movies..."
 puts 
-
+Movie.create!(movie_poster: "https://motionarray.imgix.net/preview-902643-6VSxG8mRQNW68Njh-large.jpg?w=1400&q=60&fit=max&auto=format", title: "Test Movie #1", summary: "Testing for Database Purposes")
+Movie.create!(movie_poster: "https://motionarray.imgix.net/preview-902643-6VSxG8mRQNW68Njh-large.jpg?w=1400&q=60&fit=max&auto=format", title: "Test Movie #2", summary: "Testing for Database Purposes")
 Movie.create!(movie_poster: "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg", movie_trailer: "https://www.youtube.com/embed/V75dMMIW2B4", title: "Lord of the Rings: Fellowship of the Ring", summary: "The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.", awards: "Won 4 Oscars, also with 121 wins & 126 nominations total", run_time: 178, release_date: "December 19, 2001")
 
 
@@ -17,6 +18,8 @@ Movie.create!(movie_poster: "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzU
 puts "Creating Actors..."
 puts 
 
+Actor.create!(actor_image: "https://us.123rf.com/450wm/ominaesi/ominaesi1609/ominaesi160900004/62191790-man-medieval-suit-tragic-actor-theater-stage-retro-cartoon-character-vector-illustration.jpg?ver=6", name: "Test Actor #1", brief_history: "Testing for Database Purposes")
+Actor.create!(actor_image: "https://us.123rf.com/450wm/ominaesi/ominaesi1609/ominaesi160900004/62191790-man-medieval-suit-tragic-actor-theater-stage-retro-cartoon-character-vector-illustration.jpg?ver=6", name: "Test Actor #2", brief_history: "Testing for Database Purposes")
 Actor.create!(actor_image: "https://m.media-amazon.com/images/M/MV5BMTM0NDIxMzQ5OF5BMl5BanBnXkFtZTcwNzAyNTA4Nw@@._V1_.jpg", actor_video: "https://www.youtube.com/embed/wLnoXkDZNNI", name: "Elijah Wood", brief_history: "Elijah Wood is an American actor and producer. He is best known for his portrayal of Frodo Baggins in the Lord of the Rings film trilogy and The Hobbit: An Unexpected Journey. Wood made his film debut with a small part in Back to the Future Part II.", accomplishments: "29 wins & 48 nominations", birth_date: "January 28, 1981" )
 Actor.create!(actor_image: "https://www.gannett-cdn.com/authoring/2019/05/16/PROC/33097709-2587-4e43-a3a1-654bd4bd4bb5-ROCBrd_03-31-2016_DandC_1_B006__2016_03_30_IMG_GettyImages-46374404_1_1_0KDTT0EH_L786490466_IMG_GettyImages-46374404_1_1_0KDTT0EH.jpg", actor_video: "https://www.youtube.com/embed/A_u9Hc0Yg1o", name: "Sean Astin", brief_history: "Sean Patrick Astin is an American actor. His acting roles include Samwise Gamgee in The Lord of the Rings trilogy, Mikey Walsh in The Goonies, Daniel Ruettiger in Rudy, Doug ...", accomplishments: "Nominated for 1 Oscar. Another 24 wins & 27 nominations.", birth_date: "February 25, 1971")
 Actor.create!(actor_image: "https://i.guim.co.uk/img/media/b24fbef7a9992de4d98fe6f835fdf520930dcef0/0_55_2623_1573/master/2623.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=f9bf6edf143f0869836b8329279c8d48", actor_video: "https://www.youtube.com/embed/TE2n2YbGqWE", name: "Dominic Monaghan", brief_history: "Dominic Monaghan is a British actor. He is best known for playing Meriadoc 'Merry' Brandybuck in Peter Jackson's film trilogy The Lord of the Rings, and Charlie Pace on J. J. Abrams' television show Lost.", accomplishments: "Nominated for 1 Primetime Emmy. Another 10 wins & 16 nominations", birth_date: "December 8, 1976")
@@ -39,7 +42,9 @@ Genre.create!(name: "Fantasy")
 puts "Associating All Data..."
 puts 
 
-Movie.first.actors.push([Actor.first, Actor.second, Actor.third, Actor.fourth, Actor.fifth])
+
+
+
  
 
 puts "Done seeding!"

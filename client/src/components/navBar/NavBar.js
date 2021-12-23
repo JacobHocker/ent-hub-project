@@ -26,8 +26,9 @@ function NavBar({ user, setUser }) {
           <nav className='nav-items'>
             <NavLink className='nav-link' to="/">Home</NavLink>
             <NavLink className='nav-link' to="/movies">Movies</NavLink>
-            <NavLink className='nav-link' to='/post-a-movie'>Post A Movie</NavLink>
-            <nav className="nav-link">Placeholder</nav>
+            <NavLink className='nav-link' to='/post-a-movie'>Post Movie</NavLink>
+            <NavLink className='nav-link' to='/associate'>Associate</NavLink>
+            <NavLink className='nav-link' to='/post-an-actor'>Post Actor</NavLink>
           </nav>
       </div>
       <div className="nav-user-info-container">

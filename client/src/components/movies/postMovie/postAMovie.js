@@ -55,6 +55,8 @@ function PostAMovie() {
                         value={moviePoster}
                         onChange={(event) => setMoviePoster(event.target.value)}
                     />
+                </div>
+                <div className='input-movie'>
                     <input 
                         className='movie-input'
                         type="text"
@@ -63,6 +65,8 @@ function PostAMovie() {
                         value={movieTrailer}
                         onChange={(event) => setMovieTrailer(event.target.value)}
                     />
+                </div>
+                <div className='input-movie'>
                     <input 
                         className='movie-input'
                         type="text"
@@ -71,6 +75,8 @@ function PostAMovie() {
                         value={title}
                         onChange={(event) => setTitle(event.target.value)}
                     />
+                </div>
+                <div className='input-movie'>
                     <textarea 
                         className='movie-input'
                         type="text"
@@ -79,6 +85,8 @@ function PostAMovie() {
                         value={summary}
                         onChange={(event) => setSummary(event.target.value)}
                     />
+                </div>
+                <div className='input-movie'>
                     <textarea 
                         className='movie-input'
                         type="text"
@@ -87,6 +95,8 @@ function PostAMovie() {
                         value={awards}
                         onChange={(event) => setAwards(event.target.value)}
                     />
+                </div>  
+                <div className='input-movie'>  
                     <input 
                         className='movie-input'
                         type="number"
@@ -95,6 +105,8 @@ function PostAMovie() {
                         value={runTime}
                         onChange={(event) => setRunTime(event.target.value)}
                     />
+                </div>
+                <div className='input-movie'>
                     <input 
                         className='movie-input'
                         type="text"
@@ -103,10 +115,12 @@ function PostAMovie() {
                         value={releaseDate}
                         onChange={(event) => setReleaseDate(event.target.value)}
                     />
-                </div> 
-                <button className='submit-button'>
-                    Submit Movie!
-                </button>
+                </div>
+                <div className='input-movie'>
+                    <button className='submit-button'>
+                        Submit Movie!
+                    </button>
+                </div>
             </form>
         </div>
     )

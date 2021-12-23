@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :directors
   resources :actors
   resources :movies
-  
+  resources :actors_movies, only: [:create]
   
 
   
