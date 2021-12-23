@@ -14,6 +14,7 @@ function NavBar({ user, setUser }) {
     });
   }
  
+  
   return (
     <div className="navbar-container">
       <nav>
@@ -25,8 +26,7 @@ function NavBar({ user, setUser }) {
           <nav className='nav-items'>
             <NavLink className='nav-link' to="/">Home</NavLink>
             <NavLink className='nav-link' to="/movies">Movies</NavLink>
-            <nav className="nav-link">Placeholder</nav>
-            <nav className="nav-link">Placeholder</nav>
+            <NavLink className='nav-link' to='/post-a-movie'>Post A Movie</NavLink>
             <nav className="nav-link">Placeholder</nav>
           </nav>
       </div>

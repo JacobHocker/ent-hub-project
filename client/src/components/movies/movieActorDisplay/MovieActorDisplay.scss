@@ -2,7 +2,7 @@
 
 .actor-display{
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .actor-movie-display-card{

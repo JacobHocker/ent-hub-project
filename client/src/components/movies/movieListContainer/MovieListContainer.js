@@ -9,8 +9,9 @@ function MovieListContainer() {
     useEffect(() => {
         fetch("/movies")
         .then((r) => r.json())
-        .then((movies) =>  setMovies(movies))
-    }, [])
+        .then((movies) => { setMovies(movies);
+        });
+    }, []);
 
     
 

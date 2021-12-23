@@ -5,17 +5,20 @@ import MovieActorDisplay from "../movieActorDisplay/MovieActorDisplay";
 
 
 function MovieInformationDisplay() {
-    const [singleMovie, setSingleMovie] = useState([])
+    const [singleMovie, setSingleMovie] = useState({})
+    
    
     const {id} = useParams()
 
-    useEffect(() => {
-        fetch(`/movies/${id}`)
-        .then((r) => r.json())
-        .then((singleMovie) => setSingleMovie(singleMovie))
-    }, [id])
-    
+    useEffect(() => {   
         
+     fetch(`/movies/${id}`)
+        .then((r) => r.json())
+        .then((singleMovie) => { setSingleMovie(singleMovie)
+        })
+    }, [id]);
+    
+    
     
     return(
         <div className="movie-info-display-page">
@@ -56,7 +59,7 @@ function MovieInformationDisplay() {
             </div>
             <div className="actor-display-card-container">
                 <h1 className="movie-info-text">Cast List:</h1>
-                <MovieActorDisplay movieId={singleMovie.id} />
+                {singleMovie?.actors && <MovieActorDisplay actors={singleMovie.actors} />}
             </div>
         </div>
     )
