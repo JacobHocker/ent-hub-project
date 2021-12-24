@@ -9,8 +9,8 @@ puts
 ### WHERE THE MOVIES ARE SEEDED
 puts "Creating Movies..."
 puts 
-Movie.create!(movie_poster: "https://motionarray.imgix.net/preview-902643-6VSxG8mRQNW68Njh-large.jpg?w=1400&q=60&fit=max&auto=format", title: "Test Movie #1", summary: "Testing for Database Purposes")
-Movie.create!(movie_poster: "https://motionarray.imgix.net/preview-902643-6VSxG8mRQNW68Njh-large.jpg?w=1400&q=60&fit=max&auto=format", title: "Test Movie #2", summary: "Testing for Database Purposes")
+Movie.create!(movie_poster: "https://motionarray.imgix.net/preview-902643-6VSxG8mRQNW68Njh-large.jpg?w=1400&q=60&fit=max&auto=format", title: "Test Movie #1", summary: "Testing for Database Purposes", awards: "N/A", run_time: 1, release_date: "January 1, 1900")
+Movie.create!(movie_poster: "https://motionarray.imgix.net/preview-902643-6VSxG8mRQNW68Njh-large.jpg?w=1400&q=60&fit=max&auto=format", title: "Test Movie #2", summary: "Testing for Database Purposes", awards: "N/A", run_time: 1, release_date: "January 1, 1900")
 Movie.create!(movie_poster: "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg", movie_trailer: "https://www.youtube.com/embed/V75dMMIW2B4", title: "Lord of the Rings: Fellowship of the Ring", summary: "The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.", awards: "Won 4 Oscars, also with 121 wins & 126 nominations total", run_time: 178, release_date: "December 19, 2001")
 
 

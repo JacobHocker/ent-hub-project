@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './postAMovie.scss';
+import './PostAMovie.scss';
 
 function PostAMovie() {
     const [movies, setMovies] = useState([])

@@ -26,9 +26,12 @@ function NavBar({ user, setUser }) {
           <nav className='nav-items'>
             <NavLink className='nav-link' to="/">Home</NavLink>
             <NavLink className='nav-link' to="/movies">Movies</NavLink>
-            <NavLink className='nav-link' to='/post-a-movie'>Post Movie</NavLink>
-            <NavLink className='nav-link' to='/associate'>Associate</NavLink>
-            <NavLink className='nav-link' to='/post-an-actor'>Post Actor</NavLink>
+            <NavLink className='nav-link' to='/actors'>Actors</NavLink>
+            <NavLink className='nav-link' to='/directors'>Directors</NavLink>
+            <NavLink className='nav-link' to='/genres'>Genres</NavLink>
+            <NavLink className='nav-link' to='/post'>Post</NavLink> 
+            <NavLink className='nav-link' to='/associate'>Associate</NavLink> 
+            <NavLink className='nav-link' to='/edit'>Edit</NavLink> 
           </nav>
       </div>
       <div className="nav-user-info-container">
@@ -40,7 +43,7 @@ function NavBar({ user, setUser }) {
       </div>
     </div>
   );
-}
+};
 
 
 
