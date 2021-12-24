@@ -21,9 +21,25 @@ class ActorsController < ApplicationController
         render json: actor, status: :created  
     end
 
+    # PATCH /actors/:id
+    def update 
+        actor = Actor.find_by(id: params[:id])
+        if actor
+            actor.update(actor_params)
+            render json: actor
+        else
+            render json: { error: "Actor not found" }, status: :not_found
+        end
+    end
+
+    #GET /actor/:id RANDOM
+    def random_actor 
+        render json: Actor.find_by(id: params[:id]) || Actor.random
+    end
+
     private 
 
     def actor_params
-        params.permit(:actor_image, :actor_video, :name, :brief_history, :accomplishments, :birth_date)
+        params.permit(:actor_image, :actor_video, :name, :brief_history, :accomplishments, :net_worth, :birth_date)
     end
 end

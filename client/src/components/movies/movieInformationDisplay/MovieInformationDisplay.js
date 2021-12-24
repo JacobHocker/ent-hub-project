@@ -55,6 +55,12 @@ function MovieInformationDisplay() {
                         <h4 className="movie-p">{singleMovie.awards}</h4>
                     </div>
                     </>
+                    <>
+                    <div className="movie-display">
+                        <h2 className="movie-info-text">Gross Worldwide: </h2>
+                        <h4 className="movie-p">{singleMovie.gross_worldwide}</h4>
+                    </div>
+                    </>
                 </div>
             </div>
             <div className="actor-display-card-container">

@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //import { Link } from 'react-router-dom';
 
 function Home() {
+  const [randActor, setRandActor] = useState([])
+
+  useEffect(() => {
+    fetch("/random_actor")
+    .then((r) => r.json())
+    .then((randActor) => { setRandActor(randActor);
+    });
+}, []);
+
+    console.log(randActor)
 
     return(
     <div className='home'>

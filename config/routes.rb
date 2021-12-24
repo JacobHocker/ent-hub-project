@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   resources :movies
   resources :actors_movies, only: [:create]
   
+  # CONTENT CUSTOM ROUTES
+  get "/random_actor", to: "actors#random_actor"
 
-  
+  # USER 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   post "/login", to: "sessions#create"

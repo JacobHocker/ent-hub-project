@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_175438) do
     t.string "name"
     t.string "brief_history"
     t.string "accomplishments"
+    t.string "net_worth"
     t.string "birth_date"
   end
 
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_175438) do
     t.string "birth_date"
     t.string "brief_history"
     t.string "accomplishments"
+    t.string "net_worth"
   end
 
   create_table "directors_movies", force: :cascade do |t|
@@ -82,6 +84,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_175438) do
     t.string "awards"
     t.integer "run_time"
     t.string "release_date"
+    t.string "gross_worldwide"
   end
 
   create_table "users", force: :cascade do |t|

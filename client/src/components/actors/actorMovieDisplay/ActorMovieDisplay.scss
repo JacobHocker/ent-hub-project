@@ -1,11 +1,11 @@
 @use '../../../assets/partials/colors';
 
-.actor-display{
+.movie-display{
     display: flex;
     flex-wrap: wrap;
 }
 
-.actor-movie-display-card{
+.movie-actor-display-card{
     width: 250px;
     height: 475px;
     margin: 1rem;
@@ -16,7 +16,7 @@
     position: relative;
 }
 
-.actor-movie-display-info{
+.movie-actor-display-info{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,12 +24,12 @@
 }
 
 
-.actor-movie-display-image{
+.movie-actor-display-image{
     width: 100%;
     height: 75%;
 }
 
-.actor-movie-display-summary{
+.movie-actor-display-summary{
     background-color: colors.$light-grey;
     position: absolute;
     padding: 1rem;
@@ -40,7 +40,7 @@
     transition: transform 0.4s ease-in-out;
 }
 
-.actor-movie-display-card:hover .actor-movie-display-summary{
+.movie-actor-display-card:hover .movie-actor-display-summary{
     transform: translateY(0%);
 }
 

@@ -11,6 +11,7 @@ import EditorContainer from "./components/editing/editorContainer/EditorContaine
 import ActorListContainer from "./components/actors/actorListContainer/ActorListContainer";
 import DirectorListContainer from "./components/directors/directorListContainer/DirectorListContainer";
 import GenreListContainer from "./components/genres/genreListContainer/GenreListContainer";
+import ActorInformationDisplay from "./components/actors/actorInformationDisplay/ActorInformationDisplay";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="movies" element={<MovieListContainer />} />
         <Route path="movies/:id" element={<MovieInformationDisplay />} />
         <Route path="actors" element={<ActorListContainer />} />
+        <Route path="actors/:id" element={<ActorInformationDisplay />} />
         <Route path="directors" element={<DirectorListContainer />} />
         <Route path="genres" element={<GenreListContainer />} />
         <Route path="post" element={<PostContainer />} />

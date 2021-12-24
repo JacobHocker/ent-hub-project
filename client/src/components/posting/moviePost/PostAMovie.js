@@ -8,8 +8,9 @@ function PostAMovie() {
     const [title, setTitle] = useState("");
     const [summary, setSummary] = useState("");
     const [awards, setAwards] = useState("");
-    const [runTime, setRunTime] = useState(0);
+    const [runTime, setRunTime] = useState("");
     const [releaseDate, setReleaseDate] = useState("");
+    const [grossWorldwide, setGrossWorldwide] = useState("");
 
     useEffect(() => {
         fetch("/movies")
@@ -37,6 +38,7 @@ function PostAMovie() {
                 awards: awards,
                 run_time: runTime,
                 release_date: releaseDate,
+                gross_worldwide: grossWorldwide,
             }),
         })
         .then((r) => r.json())
@@ -114,6 +116,16 @@ function PostAMovie() {
                         name='Movie Release Date'
                         value={releaseDate}
                         onChange={(event) => setReleaseDate(event.target.value)}
+                    />
+                </div>
+                <div className='input-movie'>
+                    <input 
+                        className='movie-input'
+                        type="text"
+                        placeholder='Movie Gross Worldwide'
+                        name='Movie Gross Worldwide'
+                        value={grossWorldwide}
+                        onChange={(event) => setGrossWorldwide(event.target.value)}
                     />
                 </div>
                 <div className='input-movie'>

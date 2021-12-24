@@ -1,6 +1,6 @@
 @use '../../../assets/partials/colors';
 
-.movie-list-display-card {
+.actor-list-display-card {
     width: 250px;
     margin: 1rem;
     background-color: colors.$medium-grey;
@@ -10,23 +10,23 @@
     position: relative;
 }
 
-.movie-list-display-image {
+.actor-list-display-image {
     max-width: 100%;
 }
 
 
-.movie-list-display-info {
+.actor-list-display-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
 }
 
-.movie-list-display-info h3{
+.actor-list-display-info h3{
     margin: 0;
 }
 
-.movie-list-display-summary {
+.actor-list-display-summary {
     background-color: colors.$light-grey;
     position: absolute;
     padding: 1rem;
@@ -37,6 +37,6 @@
     transition: transform 0.4s ease-in-out;
 }
 
-.movie-list-display-card:hover .movie-list-display-summary {
+.actor-list-display-card:hover .actor-list-display-summary {
     transform: translateY(0%);
 }

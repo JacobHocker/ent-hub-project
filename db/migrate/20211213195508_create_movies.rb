@@ -8,6 +8,7 @@ class CreateMovies < ActiveRecord::Migration[6.1]
       t.string :awards
       t.integer :run_time
       t.string :release_date 
+      t.string :gross_worldwide
     end
   end
 end

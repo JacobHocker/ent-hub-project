@@ -9,6 +9,7 @@ function PostAnActor() {
     const [briefHistory, setBriefHistory] = useState("");
     const [accomplishments, setAccomplishments] = useState("");
     const [birthDate, setBirthDate] = useState("");
+    const [netWorth, setNetWorth] = useState("");
     
 
     useEffect(() => {
@@ -36,6 +37,7 @@ function PostAnActor() {
                 brief_history: briefHistory,
                 accomplishments: accomplishments,
                 birth_date: birthDate,
+                net_worth: netWorth,
             }),
         })
         .then((r) => r.json())
@@ -104,7 +106,17 @@ function PostAnActor() {
                         value={birthDate}
                         onChange={(event) => setBirthDate(event.target.value)}
                     />
-                </div>    
+                </div>  
+                <div className='input-actor'>
+                    <input 
+                        className='actor-input'
+                        type="text"
+                        placeholder='Actor Net Worth'
+                        name='Net Worth'
+                        value={netWorth}
+                        onChange={(event) => setNetWorth(event.target.value)}
+                    />
+                </div>   
                 <div className='input-actor'> 
                     <button className='submit-button'>
                         Submit Actor!

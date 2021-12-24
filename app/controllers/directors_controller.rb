@@ -24,7 +24,7 @@ class DirectorsController < ApplicationController
     private 
 
     def actor_params
-        params.permit(:director_image, :name, :brief_history, :accomplishments, :birth_date)
+        params.permit(:director_image, :name, :brief_history, :accomplishments, :net_worth, :birth_date)
     end
 end
 

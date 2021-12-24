@@ -6,6 +6,7 @@ class CreateDirectors < ActiveRecord::Migration[6.1]
       t.string :birth_date
       t.string :brief_history
       t.string :accomplishments
+      t.string :net_worth
 
     end
   end
