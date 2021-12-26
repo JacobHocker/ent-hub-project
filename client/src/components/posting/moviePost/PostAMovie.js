@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './PostAMovie.scss';
 
-function PostAMovie() {
-    const [movies, setMovies] = useState([])
+function PostAMovie({ onAddMovie }) {
     const [moviePoster, setMoviePoster] = useState("");
     const [movieTrailer, setMovieTrailer] = useState("");
     const [title, setTitle] = useState("");
@@ -12,16 +11,7 @@ function PostAMovie() {
     const [releaseDate, setReleaseDate] = useState("");
     const [grossWorldwide, setGrossWorldwide] = useState("");
 
-    useEffect(() => {
-        fetch("/movies")
-        .then((r) => r.json())
-        .then((movies) =>  setMovies(movies))
-    }, [])
     
-    function handleAddMovie(newMovie) {
-        const updatedMovies = [...movies, newMovie]
-        setMovies(updatedMovies)
-    }
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -42,7 +32,7 @@ function PostAMovie() {
             }),
         })
         .then((r) => r.json())
-        .then((newMovie) => handleAddMovie(newMovie))
+        .then((newMovie) => onAddMovie(newMovie))
     }
 
     return(

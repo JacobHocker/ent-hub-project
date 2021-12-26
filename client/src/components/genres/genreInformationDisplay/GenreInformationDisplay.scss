@@ -1,0 +1,28 @@
+@use '../../../assets/partials/colors';
+
+.genre-info-display-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.genre-info-poster-display{
+    width: 20rem;
+}
+
+.genre-display{
+    display: flex;
+    align-items: baseline;
+    margin-left: 1rem;
+}
+
+.genre-p{
+    font-size: 1.25rem;
+}
+
+
+.genre-info-text{
+    color: colors.$gold;
+    font-size: 2.5rem;
+    padding-right: 3rem;
+}

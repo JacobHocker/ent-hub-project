@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import './PostAnActor.scss'
+import './PostADirector.scss'
 
-function PostAnActor({ onAddActor }) {
-    const [actorImage, setActorImage] = useState("");
-    const [actorVideo, setActorVideo] = useState("");
+function PostADirector({ onAddDirector }) {
+    const [directorImage, setDirectorImage] = useState("");
     const [name, setName] = useState("");
     const [briefHistory, setBriefHistory] = useState("");
     const [accomplishments, setAccomplishments] = useState("");
@@ -11,17 +10,19 @@ function PostAnActor({ onAddActor }) {
     const [netWorth, setNetWorth] = useState("");
     
 
+   
+    
+    
 
     function handleSubmit(event) {
         event.preventDefault()
-        fetch("/actors", {
+        fetch("/directors", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                actor_image: actorImage,
-                actor_video: actorVideo,
+                director_image: directorImage,
                 name: name,
                 brief_history: briefHistory,
                 accomplishments: accomplishments,
@@ -30,85 +31,75 @@ function PostAnActor({ onAddActor }) {
             }),
         })
         .then((r) => r.json())
-        .then((newActor) => onAddActor(newActor))
+        .then((newDirector) => onAddDirector(newDirector))
     }
 
     return(
-        <div className='actor-post-form-container'>
-            <form onSubmit={handleSubmit} className='actor-form'>
-                <div className='input-actor'>
+        <div className='director-post-form-container'>
+            <form onSubmit={handleSubmit} className='director-form'>
+                <div className='input-director'>
                     <input 
-                        className='actor-input'
+                        className='director-input'
                         type="text"
-                        placeholder='Actor Image URL'
-                        name='Actor Image'
-                        value={actorImage}
-                        onChange={(event) => setActorImage(event.target.value)}
+                        placeholder='Director Image URL'
+                        name='Director Image'
+                        value={directorImage}
+                        onChange={(event) => setDirectorImage(event.target.value)}
                     />
                 </div>
-                <div className='input-actor'>
+                <div className='input-director'>
                     <input 
-                        className='actor-input'
+                        className='director-input'
                         type="text"
-                        placeholder='Actor Video URL'
-                        name='Actor Video'
-                        value={actorVideo}
-                        onChange={(event) => setActorVideo(event.target.value)}
-                    />
-                </div>
-                <div className='input-actor'>
-                    <input 
-                        className='actor-input'
-                        type="text"
-                        placeholder='Actor Name'
-                        name='Actor Name'
+                        placeholder='Director Name'
+                        name='Director Name'
                         value={name}
                         onChange={(event) => setName(event.target.value)}
                     />
                 </div>
-                <div className='input-actor'>
+                <div className='input-director'>
                     <textarea 
-                        className='actor-input'
+                        className='director-input'
                         type="text"
-                        placeholder='A Brief History About Actor'
+                        placeholder='A Brief History About Director'
                         name='Brief History'
                         value={briefHistory}
                         onChange={(event) => setBriefHistory(event.target.value)}
                     />
                 </div>
-                <div className='input-actor'>
+                <div className='input-director'>
                     <textarea 
-                        className='actor-input'
+                        className='director-input'
                         type="text"
-                        placeholder='Actor Accomplishments'
+                        placeholder='Director Accomplishments'
                         name='Accomplishments'
                         value={accomplishments}
                         onChange={(event) => setAccomplishments(event.target.value)}
                     />
                 </div>
-                <div className='input-actor'>
+                <div className='input-director'>
                     <input 
-                        className='actor-input'
+                        className='director-input'
                         type="text"
-                        placeholder='Actor Birth Date'
+                        placeholder='Director Birth Date'
                         name='Birth Date'
                         value={birthDate}
                         onChange={(event) => setBirthDate(event.target.value)}
                     />
                 </div>  
-                <div className='input-actor'>
+                <div className='input-director'>
                     <input 
-                        className='actor-input'
+                        className='director-input'
                         type="text"
-                        placeholder='Actor Net Worth'
+                        placeholder='Director Net Worth'
                         name='Net Worth'
                         value={netWorth}
                         onChange={(event) => setNetWorth(event.target.value)}
                     />
                 </div>   
-                <div className='input-actor'> 
+                <div className='input-director'> 
                     <button className='submit-button'>
-                        Submit Actor!
+                        Submit Director!
                     </button>
                 </div>
             </form>
@@ -116,4 +107,4 @@ function PostAnActor({ onAddActor }) {
     )
 }
 
-export default PostAnActor
+export default PostADirector

@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-.actor-list-display-card {
+.director-list-display-card {
     width: 250px;
     margin: 1rem;
     background-color: colors.$medium-grey;
@@ -14,23 +14,23 @@
     position: relative;
 }
 
-.actor-list-display-image {
+.director-list-display-image {
     max-width: 100%;
 }
 
 
-.actor-list-display-info {
+.director-list-display-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
 }
 
-.actor-list-display-info h3{
+.director-list-display-info h3{
     margin: 0;
 }
 
-.actor-list-display-summary {
+.director-list-display-summary {
     background-color: colors.$light-grey;
     position: absolute;
     padding: 1rem;
@@ -41,6 +41,6 @@
     transition: transform 0.4s ease-in-out;
 }
 
-.actor-list-display-card:hover .actor-list-display-summary {
+.director-list-display-card:hover .director-list-display-summary {
     transform: translateY(0%);
 }

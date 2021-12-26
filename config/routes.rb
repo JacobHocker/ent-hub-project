@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :actors
   resources :movies
   resources :actors_movies, only: [:create, :update]
+  resources :directors_movies, only: [:create, :update]
+  resources :genres_movies, only: [:create, :update]
   
   # CONTENT CUSTOM ROUTES
   get "/random_actor", to: "actors#random_actor"

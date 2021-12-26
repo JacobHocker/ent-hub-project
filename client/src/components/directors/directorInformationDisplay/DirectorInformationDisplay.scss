@@ -1,0 +1,32 @@
+@use '../../../assets/partials/colors';
+
+.director-info-display-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.director-info-poster-display{
+    width: 20rem;
+}
+
+.director-display{
+    display: flex;
+    align-items: baseline;
+    margin-left: 1rem;
+}
+
+.director-p{
+    font-size: 1.25rem;
+}
+
+
+.director-info-text{
+    color: colors.$gold;
+    font-size: 2.5rem;
+    padding-right: 3rem;
+}
+
+
+
+

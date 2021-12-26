@@ -3,25 +3,29 @@ import { NavLink } from 'react-router-dom';
 import './ActorList.scss'
 
 
-function ActorList({ name, actorImage, actor, briefHistory }) { 
-    let actorId = actor.id 
+function ActorList({ actors }) { 
     
-    return(
+    const actorCardDisplay = actors.map((actor) => (
         <div  className='actor-list-display-card'>
-            <img src={actorImage} alt={name} className='actor-list-display-image' />
+            <img src={actor.actor_image} alt={actor.name} className='actor-list-display-image' />
             <div className='actor-list-display-info'>
-                <h4>{name}</h4>
+                <h4>{actor.name}</h4>
             </div>
             <div className='actor-list-display-summary'>
                 <h4>Actor History: </h4>
-                <p>{briefHistory}</p>
+                <p>{actor.brief_history}</p>
                 <button>
-                    <NavLink to={`/actors/${actorId}`}>
+                    <NavLink to={`/actors/${actor.id}`}>
                         Learn More! 
                     </NavLink>
                 </button>
             </div>
-           
+        </div>
+    ))
+    
+    return(
+        <div className='cards-section'>
+            {actorCardDisplay}
         </div>
     )
 }

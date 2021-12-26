@@ -1,33 +1,19 @@
-import React, { useEffect, useState } from "react";
-import './Associate.scss'
+import React, { useState } from "react";
+import './GenreMovieAssociate.scss'
 
-function Associate() {
-    const [movies, setMovies] = useState([])
-    const [actors, setActors] = useState([])
+function GenreMovieAssociate({ movies, genres }) {
     const [movieId, setMovieId] = useState("")
-    const [actorId, setActorId] = useState("")
+    const [genreId, setGenreId] = useState("")
 
-    useEffect(() => {
-        fetch("/movies")
-        .then((r) => r.json())
-        .then((movies) => { setMovies(movies);
-        });
-    }, []);
-
-    useEffect(() => {
-        fetch("/actors")
-        .then((r) => r.json())
-        .then((actors) => { setActors(actors);
-        });
-    }, []);
+    
 
     function handleSubmit(event) {
         event.preventDefault()
         const formData = {
-            actor_id: actorId,
+            genre_id: genreId,
             movie_id: movieId,
         };
-        fetch("/actors_movies", {
+        fetch("/directors_movies", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -38,9 +24,10 @@ function Associate() {
 
     return(
         <div className="form">
+            <h1>Movie Genre Association Area: </h1>
             <form onSubmit={handleSubmit}>
                 <div className="movie-select">
-                <h1>Pick Movie To Associate :</h1>
+                <h2>Pick Movie To Associate :</h2>
                         <select
                         id="movie_id"
                         name="movie_id"
@@ -52,16 +39,16 @@ function Associate() {
                             ))}
                         </select>
                 </div>
-                <div className="actor-select">
-                    <h1>Pick Actor To Associate :</h1>
+                <div className="genre-select">
+                    <h1>Pick Genre To Associate :</h1>
                         <select
-                        id="actor_id"
-                        name="actor_id"
-                        value={actorId}
-                        onChange={(e) => setActorId(e.target.value)}
+                        id="genre_id"
+                        name="genre_id"
+                        value={genreId}
+                        onChange={(e) => setGenreId(e.target.value)}
                         >
-                            {actors?.map((actor) => (
-                                <option key={actor.id} value={actor.id}>{actor.name}</option>
+                            {genres?.map((genre) => (
+                                <option key={genre.id} value={genre.id}>{genre.name}</option>
                             ))}
                         </select>
                 </div>
@@ -73,4 +60,4 @@ function Associate() {
     )
 }
 
-export default Associate
+export default GenreMovieAssociate
