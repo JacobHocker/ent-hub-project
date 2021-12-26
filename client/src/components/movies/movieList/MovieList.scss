@@ -1,5 +1,8 @@
 @use '../../../assets/partials/colors';
-
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
 .movie-list-display-card {
     width: 250px;
     margin: 1rem;

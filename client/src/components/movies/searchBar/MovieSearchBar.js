@@ -1,9 +1,21 @@
 import React from 'react'
 
-function MovieSearchBar() {
+function MovieSearchBar({ searchTerm, onChangeSearch }) {
+
+    function handleChange(event) {
+        onChangeSearch(event.target.value)
+    }
+
     return(
         <div className='search-bar'>
-            <h1>This is where the search bar will be</h1>
+            <h1>Search For A Movie! </h1>
+            <input 
+            className='movie-search-bar'
+            type='text'
+            placeholder='Search By Title'
+            value={searchTerm}
+            onChange={handleChange}
+            />
         </div>
 
     );

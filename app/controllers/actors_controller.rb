@@ -40,6 +40,6 @@ class ActorsController < ApplicationController
     private 
 
     def actor_params
-        params.permit(:actor_image, :actor_video, :name, :brief_history, :accomplishments, :net_worth, :birth_date)
+        params.permit(:id, :actor_image, :actor_video, :name, :brief_history, :accomplishments, :net_worth, :birth_date, :actor)
     end
 end
