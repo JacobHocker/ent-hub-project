@@ -21,7 +21,10 @@ class MoviesController < ApplicationController
         render json: movie, status: :created 
     end
 
-
+    #GET /movie/:id RANDOM
+    def random_movie
+        render json: Movie.find_by(id: params[:id]) || Movie.random
+    end
      
 
     private  

@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   resources :genres_movies, only: [:create, :update]
   
   # CONTENT CUSTOM ROUTES
+  get "/random_movie", to: "movies#random_movie"
   get "/random_actor", to: "actors#random_actor"
+  get "/random_director", to: "directors#random_director"
+  get "/random_genre", to: "genres#random_genre"
 
   # USER 
   post "/signup", to: "users#create"

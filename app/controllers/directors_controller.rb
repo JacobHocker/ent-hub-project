@@ -21,6 +21,11 @@ class DirectorsController < ApplicationController
         render json: director, status: :created  
     end
 
+    #GET /director/:id RANDOM
+    def random_director 
+        render json: Director.find_by(id: params[:id]) || Director.random
+    end
+
     private 
 
     def actor_params

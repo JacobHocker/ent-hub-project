@@ -21,6 +21,11 @@ class GenresController < ApplicationController
         render json: genre, status: :created  
     end
 
+    #GET /genre/:id RANDOM
+    def random_genre
+        render json: Genre.find_by(id: params[:id]) || Genre.random
+    end
+
     private 
 
     def genre_params

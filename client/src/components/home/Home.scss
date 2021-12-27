@@ -1,0 +1,66 @@
+@use '../../assets/partials/colors';
+
+.welcome-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.welcome-area h1{
+    color: colors.$gold;
+    font-size: 4rem;
+}
+
+.about-site-container{
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-site-container h2{
+    color: colors.$gold;
+    font-size: 3.2rem;
+}
+
+.about-site-container p{
+    font-size: 1.7rem;
+}
+
+.random-database-description{
+    display: flex;
+    align-items: center;
+    font-size: 2.25rem;
+}
+
+.randomize-image{
+    width: 300px;
+}
+
+.random-database-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4.5rem;
+}
+
+.random-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.random-container h3{
+    color: colors.$gold;
+    font-size: 2.25rem;
+}
+
+.randomize-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.randomize-info h4{
+    font-size: 1.75rem;
+}
