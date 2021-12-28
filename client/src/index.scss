@@ -1,12 +1,17 @@
 @use './assets/partials/colors';
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-
+html{
+  height: 100%;
+}
 
 body {
+  height: 100%;
   margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   color: colors.$white;
-  background-color: colors.$dark-grey;
+  background-image: linear-gradient(to bottom right, #7c7e7e, #7e1616, #DC2026 , #7e1616, #7c7e7e);
 }

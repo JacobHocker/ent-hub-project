@@ -29,8 +29,8 @@ Actor.create!(actor_image: "https://m.media-amazon.com/images/M/MV5BMTkzMzc4MDk5
 puts "Creating Directors..."
 puts 
 
-Director.create!(director_image: "https://media.istockphoto.com/photos/video-movie-cinema-concept-retro-camera-clapperboard-and-director-3d-picture-id831360802?k=20&m=831360802&s=612x612&w=0&h=_MOWj0NXT8bA5kEv9NQNjBJTPZgwI2OdoYwMmTQ7atU=", name: "Test Director #1", brief_history: "Testing for Database Purposes")
-Director.create!(director_image: "https://media.istockphoto.com/photos/video-movie-cinema-concept-retro-camera-clapperboard-and-director-3d-picture-id831360802?k=20&m=831360802&s=612x612&w=0&h=_MOWj0NXT8bA5kEv9NQNjBJTPZgwI2OdoYwMmTQ7atU=", name: "Test Director #1", brief_history: "Testing for Database Purposes")
+Director.create!(director_image: "http://unblast.com/wp-content/uploads/2020/10/Movie-Director-Vector-Illustration.jpg", name: "Test Director #1", brief_history: "Testing for Database Purposes")
+Director.create!(director_image: "http://unblast.com/wp-content/uploads/2020/10/Movie-Director-Vector-Illustration.jpg", name: "Test Director #1", brief_history: "Testing for Database Purposes")
 Director.create!(director_image: "https://m.media-amazon.com/images/M/MV5BYjFjOThjMjgtYzM5ZS00Yjc0LTk5OTAtYWE4Y2IzMDYyZTI5XkEyXkFqcGdeQXVyMTMxMTIwMTE0._V1_.jpg", name: "Peter Jackson", birth_date: "October 31, 1961", brief_history: "Sir Peter Robert Jackson ONZ KNZM is a New Zealand film director, screenwriter, and film producer. He is best known as the director, writer, and producer of the Lord of the Rings trilogy and the Hobbit trilogy, both of which are adapted from the novels of the same name by J. R. R. Tolkien", accomplishments: "Won 3 Oscars. Another 139 wins & 139 nominations.", net_worth: "$1 Billion")
 
 
@@ -38,8 +38,8 @@ Director.create!(director_image: "https://m.media-amazon.com/images/M/MV5BYjFjOT
 puts "Creating Genres..."
 puts 
 
-Genre.create!(genre_picture: "https://image.shutterstock.com/image-vector/movie-genres-neon-light-icons-260nw-1714553032.jpg", name: "Test Genre #1", description: "Test for database purposes")
-Genre.create!(genre_picture: "https://image.shutterstock.com/image-vector/movie-genres-neon-light-icons-260nw-1714553032.jpg", name: "Test Genre #2", description: "Test for database purposes")
+Genre.create!(genre_picture: "https://thumbs.dreamstime.com/z/movie-genres-icons-vector-10044244.jpg", name: "Test Genre #1", description: "Test for database purposes")
+Genre.create!(genre_picture: "https://thumbs.dreamstime.com/z/movie-genres-icons-vector-10044244.jpg", name: "Test Genre #2", description: "Test for database purposes")
 Genre.create!(genre_picture: "https://static.wikia.nocookie.net/aesthetics/images/c/cd/Fantasy_World.jpg/revision/latest?cb=20201122150254", name: "Fantasy", description: "Fantasy is a genre of speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama")
 
  

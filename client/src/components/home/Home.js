@@ -59,7 +59,7 @@ useEffect(() => {
             <h4>{randMovie.title}</h4>
             <img src={randMovie.movie_poster} alt={randMovie.title} className='randomize-image' />
             <Link to={`/movies/${randMovie.id}`}>
-              <button>Check It Out!</button>
+              <button className="home-page-button">Check It Out!</button>
             </Link>
           </div>
         </div>
@@ -69,7 +69,7 @@ useEffect(() => {
             <h4>{randActor.name}</h4>
             <img src={randActor.actor_image} alt={randMovie.name} className='randomize-image' />
             <Link to={`/actors/${randActor.id}`}>
-              <button>Check Them Out!</button>
+              <button className="home-page-button">Check Them Out!</button>
             </Link>
           </div>
         </div>
@@ -79,7 +79,7 @@ useEffect(() => {
             <h4>{randDirector.name}</h4>
             <img src={randDirector.director_image} alt={randDirector.name} className='randomize-image' />
             <Link to={`/directors/${randDirector.id}`}>
-              <button>Check Them Out!</button>
+              <button className="home-page-button">Check Them Out!</button>
             </Link>
           </div>
         </div>
@@ -87,9 +87,9 @@ useEffect(() => {
           <h3>Genre:  </h3>
           <div className="randomize-info">
             <h4>{randGenre.name}</h4>
-            <img src={randGenre.genre_image} alt={randGenre.name} className='randomize-image' />
+            <img src={randGenre.genre_picture} alt={randGenre.name} className='randomize-image' />
             <Link to={`/genres/${randGenre.id}`}>
-              <button>Check It Out!</button>
+              <button className="home-page-button">Check It Out!</button>
             </Link>
           </div>
         </div>
@@ -99,3 +99,5 @@ useEffect(() => {
 }
 
 export default Home;
+
+

@@ -5,12 +5,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 80px;
-    background-color: colors.$medium-grey;
+    height: 150px;
+    background-image: linear-gradient(to right, #7c7e7e34, #7e1616,#7e1616, #7d6060);
 }
 
 .eh-logo-nav{
-    width: 9rem;
+    width: 12rem;
     margin-right: 3rem;
 }
 
@@ -26,21 +26,22 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    flex-wrap: wrap;
 }
 
 .nav-link{
     display: flex;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 1.50rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: colors.$white;
     text-decoration: none;
     height: 50%;
-    margin-left: 1.5rem;;
+    margin-left: 2rem;;
     
     &:hover{
-        background-color: colors.$gold;
-        color: colors.$dark-grey;
+        background-color: colors.$dark-grey;
+        color: colors.$dark-gold;
         border-radius: 3px;
         box-shadow: 1px 1px 2px colors.$white;
         overflow: hidden;
@@ -60,13 +61,44 @@
     width: 4.5rem;
     height: 4.5rem;
     object-fit: cover;
-    border: 1px solid colors.$gold;
+    border: 1px solid colors.$dark-gold;
     border-radius: 50%;
     margin-right: 1.0rem;
 }
 
+.nav-username{
+    font-size: 1.25rem;
+}
+
 .nav-log-out {
     margin-left: 1rem;
+    background-color: colors.$gold;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    width: 50%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    &:hover{
+        outline: 0;
+        background: colors.$gold;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+
+    &:focus{
+        outline: 0;
+        background: colors.$gold;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
 }
 
 

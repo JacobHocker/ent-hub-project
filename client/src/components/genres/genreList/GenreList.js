@@ -7,7 +7,7 @@ function GenreList({ genres }) {
     
     const genreCardDisplay = genres.map((genre) => (
         <div  className='genre-list-display-card'>
-            <img src={genre.genre_image} alt={genre.name} className='director-list-display-image' />
+            <img src={genre.genre_picture} alt={genre.name} className='director-list-display-image' />
             <div className='director-list-display-info'>
                 <h4>{genre.name}</h4>
             </div>

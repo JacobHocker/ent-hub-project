@@ -64,3 +64,34 @@
 .randomize-info h4{
     font-size: 1.75rem;
 }
+
+.home-page-button{
+    margin-top: 2rem;
+    background-color: colors.$gold;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    width: 50%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    &:hover{
+        outline: 0;
+        background: colors.$gold;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+
+    &:focus{
+        outline: 0;
+        background: colors.$gold;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+}
