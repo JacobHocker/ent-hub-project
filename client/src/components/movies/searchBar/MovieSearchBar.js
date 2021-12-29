@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import './MovieSearchBar.scss';
+import { GoSearch } from 'react-icons/go';
 
 function MovieSearchBar({ searchTerm, onChangeSearch }) {
 
@@ -7,15 +9,17 @@ function MovieSearchBar({ searchTerm, onChangeSearch }) {
     }
 
     return(
-        <div className='search-bar'>
-            <h1>Search For A Movie! </h1>
-            <input 
-            className='movie-search-bar'
-            type='text'
-            placeholder='Search By Title'
-            value={searchTerm}
-            onChange={handleChange}
-            />
+        <div className='search-bar-container'>
+            <div className='search-bar'>
+                <GoSearch  className='search-icon'/>
+                <input 
+                className='movie-search-bar'
+                type='text'
+                placeholder='Search By Title...'
+                value={searchTerm}
+                onChange={handleChange}
+                />
+            </div>
         </div>
 
     );

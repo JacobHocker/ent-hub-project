@@ -21,6 +21,17 @@ class DirectorsController < ApplicationController
         render json: director, status: :created  
     end
 
+    # PATCH /director/:id
+    def update 
+        director = Director.find_by(id: params[:id])
+        if director
+            director.update(director_params)
+            render json: director
+        else
+            render json: { error: "Director not found" }, status: :not_found
+        end
+    end
+
     #GET /director/:id RANDOM
     def random_director 
         render json: Director.find_by(id: params[:id]) || Director.random

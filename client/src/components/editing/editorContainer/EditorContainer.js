@@ -1,15 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import ActorEditor from '../actorEditor/ActorEditor';
+import DirectorEditor from '../directorEditor/DirectorEditor';
+import MovieEditor from '../movieEditor/MovieEditor';
 
 
 function EditorContainer() {
-    const [actors, setActors] = useState([])
+    const [actors, setActors] = useState([]);
+    const [directors, setDirectors] = useState([]);
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        fetch("/movies")
+        .then((r) => r.json())
+        .then((movies) =>  setMovies(movies))
+    }, [])
 
     useEffect(() => {
         fetch("/actors")
         .then((r) => r.json())
         .then((actors) =>  setActors(actors))
     }, [])
+
+    useEffect(() => {
+        fetch("/directors")
+        .then((r) => r.json())
+        .then((directors) =>  setDirectors(directors))
+    }, [])
+
+    function handleUpdateMovie(updatedMovie) {
+        setMovies((movies) =>
+            movies.map((movie) => {
+            return movie.id === updatedMovie.id ? updatedMovie : movie;
+            })
+        );
+    };
 
     function handleUpdateActor(updatedActor) {
         setActors((actors) =>
@@ -19,9 +43,19 @@ function EditorContainer() {
         );
     };
 
+    function handleUpdateDirector(updatedDirector) {
+        setDirectors((directors) =>
+            directors.map((director) => {
+            return director.id === updatedDirector.id ? updatedDirector : director;
+            })
+        );
+    };
+
     return(
         <div className='editor-container'>
+            <MovieEditor movies={movies} onUpdateMovie={handleUpdateMovie} />
             <ActorEditor actors={actors} onUpdateActor={handleUpdateActor} />
+            <DirectorEditor directors={directors} onUpdateDirector={handleUpdateDirector} />
         </div>
     )
 }

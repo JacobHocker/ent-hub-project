@@ -1,0 +1,38 @@
+@use '../../../assets/partials/colors';
+
+.search-bar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    color: colors.$white;
+    border: 2px solid colors.$light-grey;
+    width: 50%;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    background-color: transparent;
+    
+}
+
+.search-icon{
+    margin-left: 1rem;
+}
+
+.genre-search-bar{
+    outline: none;
+    color: colors.$white;
+    border: none;
+    padding: 6px 12px;
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+.genre-search-bar::placeholder{
+    color: colors.$white;
+}

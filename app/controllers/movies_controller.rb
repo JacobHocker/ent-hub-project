@@ -21,6 +21,17 @@ class MoviesController < ApplicationController
         render json: movie, status: :created 
     end
 
+    # PATCH /movie/:id
+    def update 
+        movie = Movie.find_by(id: params[:id])
+        if movie
+            movie.update(movie_params)
+            render json: movie
+        else
+            render json: { error: "Movie not found" }, status: :not_found
+        end
+    end
+
     #GET /movie/:id RANDOM
     def random_movie
         render json: Movie.find_by(id: params[:id]) || Movie.random

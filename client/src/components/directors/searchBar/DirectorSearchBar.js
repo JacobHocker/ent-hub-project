@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import './DirectorSearchBar.scss';
+import { GoSearch } from 'react-icons/go';
 
 function DirectorSearchBar({ searchTerm, onChangeSearch }) {
 
@@ -7,15 +9,17 @@ function DirectorSearchBar({ searchTerm, onChangeSearch }) {
     }
 
     return(
-        <div className='search-bar'>
-            <h1>Search For An Director! </h1>
-            <input 
-            className='director-search-bar'
-            type='text'
-            placeholder='Search By Name'
-            value={searchTerm}
-            onChange={handleChange}
-            />
+        <div className='search-bar-container'>
+            <div className='search-bar'>
+                <GoSearch  className='search-icon'/>
+                <input 
+                className='director-search-bar'
+                type='text'
+                placeholder='Search By Name...'
+                value={searchTerm}
+                onChange={handleChange}
+                />
+            </div>
         </div>
 
     );

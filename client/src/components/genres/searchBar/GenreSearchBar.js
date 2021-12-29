@@ -1,5 +1,6 @@
-import React from 'react'
-import './GenreSearchBar.scss'
+import React from 'react';
+import './GenreSearchBar.scss';
+import { GoSearch } from 'react-icons/go';
 
 function GenreSearchBar({ searchTerm, onChangeSearch }) {
 
@@ -8,15 +9,17 @@ function GenreSearchBar({ searchTerm, onChangeSearch }) {
     }
 
     return(
-        <div className='search-bar'>
-            <h1>Search For An Genre! </h1>
-            <input 
-            className='genre-search-bar'
-            type='text'
-            placeholder='Search By Name'
-            value={searchTerm}
-            onChange={handleChange}
-            />
+        <div className='search-bar-container'>
+            <div className='search-bar'>
+                <GoSearch  className='search-icon'/>
+                <input 
+                className='genre-search-bar'
+                type='text'
+                placeholder='Search By Name...'
+                value={searchTerm}
+                onChange={handleChange}
+                />
+            </div>
         </div>
 
     );
