@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   
-  #resources :movie_reviews, only: [:index, :show, :create]
+  resources :movie_reviews, only: [:index, :show, :create]
   resources :genres
   resources :directors
   resources :actors
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get "/random_genre", to: "genres#random_genre"
 
   # USER 
+  get "/users/:id", to: "users#general_show"
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   post "/login", to: "sessions#create"

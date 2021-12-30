@@ -8,7 +8,16 @@ class UsersController < ApplicationController
     end
 
     def show 
-        render json: @current_user
+        render :json => @current_user.to_json( :include => [:movie_reviews])
+    end
+
+    def general_show 
+        user = User.find_by(id: params[:id])
+        if user
+            render :json => user.to_json( :include => [:movie_reviews] ) 
+        else  
+            render json: { error: 'User not found' }, status: :not_found
+        end
     end
 
     private 

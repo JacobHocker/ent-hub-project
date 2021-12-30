@@ -2,14 +2,14 @@ class MoviesController < ApplicationController
     # GET /movies
     def index 
         movies = Movie.all
-        render :json => movies.to_json( :include => [:actors, :directors, :genres] )
+        render :json => movies.to_json( :include => [:actors, :directors, :genres, :movie_reviews] )
     end
      
     # GET /movies/:id
     def show 
         movie = Movie.find_by(id: params[:id])
         if movie 
-            render :json => movie.to_json( :include => [:actors, :directors, :genres] )
+            render :json => movie.to_json( :include => [:actors, :directors, :genres, :movie_reviews] )
         else  
             render json: { error: 'Movie not found' }, status: :not_found
         end
@@ -31,6 +31,19 @@ class MoviesController < ApplicationController
             render json: { error: "Movie not found" }, status: :not_found
         end
     end
+
+    # DELETE /movies/:id
+    def destroy  
+        movie = Movie.find_by(id: params[:id])
+        if movie 
+            movie.destroy 
+            head :no_content
+        else
+            render json: { error: "Movie not found" }, status: :not_found
+        end
+    end
+
+    #CUSTOM ROUTES
 
     #GET /movie/:id RANDOM
     def random_movie

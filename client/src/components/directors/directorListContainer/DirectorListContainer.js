@@ -18,12 +18,29 @@ function DirectorListContainer() {
     
     const directorsToDisplay = directors.filter((director) => 
     director.name.toLowerCase().includes(searchTerm.toLowerCase()))
+
+    function handleDeleteDirector(id) {
+        const updatedDirectors = directors.filter((director) => director.id !== id);
+        setDirectors(updatedDirectors);
+    };
+
+    const directorCards = directorsToDisplay.map((director) => (
+        <DirectorList
+            key={director.id}
+            onDeleteDirector={handleDeleteDirector}
+            director={director}
+            directorImage={director.director_image}
+            id={director.id}
+            name={director.name}
+            briefHistory={director.brief_history}
+            />
+    ))
   
     return(
         <div className='director-list-page'>
             <DirectorSearchBar searchTerm={searchTerm} onChangeSearch={setSearchTerm} />
             <div className="director-list-container">
-                <DirectorList directors={directorsToDisplay} />
+                {directorCards}
             </div>
         </div>
     )

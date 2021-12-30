@@ -32,6 +32,19 @@ class DirectorsController < ApplicationController
         end
     end
 
+    # DELETE /directors/:id
+    def destroy  
+        director = Director.find_by(id: params[:id])
+        if director 
+            director.destroy 
+            head :no_content
+        else
+            render json: { error: "Director not found" }, status: :not_found
+        end
+    end
+
+    #CUSTOM ROUTES
+
     #GET /director/:id RANDOM
     def random_director 
         render json: Director.find_by(id: params[:id]) || Director.random

@@ -37,7 +37,7 @@ useEffect(() => {
   });
 }, []);
 
-    
+     
 
     return(
     <div className='home-container'>

@@ -18,12 +18,29 @@ function ActorListContainer() {
     
     const actorsToDisplay = actors.filter((actor) => 
     actor.name.toLowerCase().includes(searchTerm.toLowerCase()))
+
+    function handleDeleteActor(id) {
+        const updatedActors = actors.filter((actor) => actor.id !== id);
+        setActors(updatedActors);
+    };
+
+    const actorCards = actorsToDisplay.map((actor) => (
+        <ActorList
+            key={actor.id}
+            onDeleteActor={handleDeleteActor}
+            actor={actor}
+            actorImage={actor.actor_image}
+            id={actor.id}
+            name={actor.name}
+            briefHistory={actor.brief_history}
+            />
+    ))
   
     return(
         <div className='actor-list-page'>
             <ActorSearchBar searchTerm={searchTerm} onChangeSearch={setSearchTerm} />
             <div className="actor-list-container">
-                <ActorList actors={actorsToDisplay} />
+                {actorCards}
             </div>
         </div>
     )

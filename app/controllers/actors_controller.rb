@@ -32,6 +32,19 @@ class ActorsController < ApplicationController
         end
     end
 
+    # DELETE /actors/:id
+    def destroy  
+        actor = Actor.find_by(id: params[:id])
+        if actor 
+            actor.destroy 
+            head :no_content
+        else
+            render json: { error: "Actor not found" }, status: :not_found
+        end
+    end
+
+    # CUSTOM ROUTES
+
     #GET /actor/:id RANDOM
     def random_actor 
         render json: Actor.find_by(id: params[:id]) || Actor.random

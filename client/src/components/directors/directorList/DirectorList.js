@@ -3,29 +3,38 @@ import { NavLink } from 'react-router-dom';
 import './DirectorList.scss'
 
 
-function DirectorList({ directors }) { 
+function DirectorList({ director, id, name, briefHistory, directorImage, onDeleteDirector }) { 
     
-    const directorCardDisplay = directors.map((director) => (
-        <div  className='director-list-display-card'>
-            <img src={director.director_image} alt={director.name} className='director-list-display-image' />
-            <div className='director-list-display-info'>
-                <h4>{director.name}</h4>
-            </div>
-            <div className='director-list-display-summary'>
-                <h4>Director History: </h4>
-                <p>{director.brief_history}</p>
-                <button>
-                    <NavLink to={`/directors/${director.id}`}>
-                        Learn More! 
-                    </NavLink>
-                </button>
-            </div>
-        </div>
-    ))
+    function handleDeleteClick() {
+        fetch(`/directors/${id}`, {
+            method: "DELETE",
+        }).then((r) => {
+            if (r.ok) {
+                onDeleteDirector(director)
+            }
+        });
+    }
     
     return(
         <div className='cards-section'>
-            {directorCardDisplay}
+            <div  className='director-list-display-card'>
+                <img src={directorImage} alt={name} className='director-list-display-image' />
+                <div className='director-list-display-info'>
+                    <h4>{name}</h4>
+                </div>
+                <div className='director-list-display-summary'>
+                    <h4>Director History: </h4>
+                    <p>{briefHistory}</p>
+                    <button>
+                        <NavLink to={`/directors/${id}`}>
+                            Learn More! 
+                        </NavLink>
+                    </button>
+                    <button onClick={handleDeleteClick}>
+                        Delete Director
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }

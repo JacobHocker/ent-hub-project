@@ -3,8 +3,8 @@ class CreateMovieReviews < ActiveRecord::Migration[6.1]
     create_table :movie_reviews do |t|
       t.string :review_content
       t.float :movie_score 
-      t.integer :movie_id, foreign_key: true 
-      t.integer :user_id, foreign_key: true
+      t.belongs_to :movie
+      t.belongs_to :user
 
       t.timestamps
     end

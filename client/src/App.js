@@ -14,6 +14,7 @@ import GenreListContainer from "./components/genres/genreListContainer/GenreList
 import ActorInformationDisplay from "./components/actors/actorInformationDisplay/ActorInformationDisplay";
 import DirectorInformationDisplay from "./components/directors/directorInformationDisplay/DirectorInformationDisplay";
 import GenreInformationDisplay from "./components/genres/genreInformationDisplay/GenreInformationDisplay";
+import UserProfileContainer from "./components/users/userProfileContainer/UserProfileContainer";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         <Route path="post" element={<PostContainer />} />
         <Route path="associate" element={<AssociatingContainer />} />
         <Route path="edit" element={<EditorContainer />} />
+        <Route path="users/:id" element={<UserProfileContainer user={user} />} />
       </Routes>
     </div>
   );

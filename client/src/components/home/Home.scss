@@ -36,6 +36,9 @@
 
 .randomize-image{
     width: 300px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
 }
 
 .random-database-container{
@@ -44,6 +47,7 @@
     justify-content: space-between;
     align-items: center;
     margin-left: 4.5rem;
+    margin-right: 4.5rem;
 }
 
 .random-container{

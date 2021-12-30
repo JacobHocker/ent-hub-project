@@ -36,7 +36,9 @@ function NavBar({ user, setUser }) {
       </div>
       <div className="nav-user-info-container">
         <img className="nav-user-pic" src={user.image_url} alt={user.username} />
-        <h4 className="nav-username">{user.username}</h4>
+        <Link to={`/users/${user.id}`}>
+          <h4 className="nav-username">{user.username}</h4>
+        </Link>
         <button  className="nav-log-out" onClick={handleLogoutClick}>
             Logout
         </button>
