@@ -1,5 +1,6 @@
 import React from "react";
 import MovieReviewCard from "../movieReviewCard/MovieReviewCard";
+import './MovieReviewList.scss'
 
 function MovieReviewList({ reviews }) {
 

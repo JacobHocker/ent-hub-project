@@ -35,3 +35,14 @@
     width: 36rem;
     height: 22rem;
 }
+
+.movie-review-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-review-page-container h1{
+    color: colors.$gold;
+    font-size: 2.5rem;
+}

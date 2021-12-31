@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieReviewList from '../movieReviewList/MovieReviewList';
 import PostMovieReview from '../postMovieReviews/PostMovieReview';
+import './MovieReviewListContainer.scss'
 
 function MovieReviewListContainer({ movieId, reviews }) {
     const [movieReviews, setMovieReviews] = useState([])
@@ -30,10 +31,14 @@ function MovieReviewListContainer({ movieId, reviews }) {
 
 
     return(
-        <div className='movie-review-list-container'>
-            <h1>Parent</h1>
-            <MovieReviewList reviews={reviews}/>
-            <PostMovieReview onAddMovieReview={handleAddMovieReview} fixedUserId={user.id} fixedMovieId={movieId} />
+        <div className='movie-review-list-page'>
+            <div className='movie-review-list-container'>
+                <MovieReviewList reviews={reviews}/>
+            </div>
+            <div className='movie-review-post-container'>
+                <h3>Leave A Review: </h3>
+                <PostMovieReview onAddMovieReview={handleAddMovieReview} fixedUserId={user.id} fixedMovieId={movieId} />
+            </div>
         </div>
     )
 }

@@ -1,0 +1,75 @@
+@use '../../../assets/partials/colors';
+
+.review-user-pic{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+.review-card{
+    width: 20rem;
+    border: 1px solid colors.$medium-grey;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    border-radius: 10%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-image: linear-gradient( #7c7e7e, #FCC252, #7c7e7e )
+}
+
+.review-card h3{
+    color: colors.$dark-gold;
+}
+
+.review-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid colors.$medium-grey;
+}
+
+.card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-content h3{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-content p{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-rating h3{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+
+.card-rating h4{
+    margin: 1rem;
+}
+
+.card-footer{
+    border-top: 1px solid colors.$medium-grey;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}

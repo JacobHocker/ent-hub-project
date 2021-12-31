@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './MovieReviewCard.scss';
 
 function MovieReviewCard({ movieScore, reviewContent, userId, createdAt }) {
     const [user, setUser] = useState({})
@@ -10,15 +11,50 @@ function MovieReviewCard({ movieScore, reviewContent, userId, createdAt }) {
         });
     }, [userId]);
 
-    
+    //👎 ⭐ 👌 👍  💀 🌟
+
+    const movieScoreSet = () => {
+        if(movieScore <= 1.0) {
+            return <h4 className="terrible-movie">{movieScore} 🚫</h4>
+        } 
+        if(movieScore >= 1.0 && movieScore <= 3.0) {
+            return <h4 className="low-quality-movie">{movieScore} 👎</h4>
+        } 
+        if (movieScore >= 3.0 && movieScore <= 6.0) {
+            return <h4 className="decent-movie">{movieScore} 👌</h4>
+        } 
+        if (movieScore >= 6.0 && movieScore <= 9.0) {
+            return <h4 className="good-movie">{movieScore} 👍</h4>
+        }
+        else {
+            return <h4 className="great-movie">{movieScore} ⭐</h4>
+        }
+    }
 
     return(
         <div className="review-card">
-            <h3>{movieScore}</h3>
-            <h3>{reviewContent}</h3>
-            <img src={user.image_url} alt={user.username} className='review-user-pic' />
-            <h3>{user.username}</h3>
-            <p>{createdAt}</p>
+            <div className="review-header">
+                <div className="card-user-image">
+                    <img src={user.image_url} alt={user.username} className='review-user-pic' />
+                </div>
+                <div className="card-user-name">
+                    <h2>{user.username}</h2>
+                </div>
+            </div>
+            <div className="review-card-review-info">
+                <div className="card-rating">
+                <h3>Movie Score: </h3>
+                {movieScoreSet()}
+                </div>
+                <div className="card-content">
+                    <h3>Review: </h3>
+                    <p>{reviewContent}</p>
+                </div>
+                <div className="card-footer">
+                    <p>Posted at: </p>
+                    <p>{createdAt}</p>
+                </div>
+            </div>
         </div>
     )
 }
