@@ -1,0 +1,10 @@
+@use '../../../assets/partials/colors';
+
+.associating-container h1{
+    font-size: 4rem;
+    color: colors.$gold;
+}
+
+.associating-container p{
+    font-size: 1.5rem;
+}

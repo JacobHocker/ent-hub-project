@@ -13,7 +13,7 @@ function GenreMovieAssociate({ movies, genres }) {
             genre_id: genreId,
             movie_id: movieId,
         };
-        fetch("/directors_movies", {
+        fetch("/genres_movies", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -24,7 +24,7 @@ function GenreMovieAssociate({ movies, genres }) {
 
     return(
         <div className="form">
-            <h1>Movie Genre Association Area: </h1>
+            <h2>Movie Genre Association Area: </h2>
             <form onSubmit={handleSubmit}>
                 <div className="movie-select">
                 <h2>Pick Movie To Associate :</h2>
@@ -40,7 +40,7 @@ function GenreMovieAssociate({ movies, genres }) {
                         </select>
                 </div>
                 <div className="genre-select">
-                    <h1>Pick Genre To Associate :</h1>
+                    <h2>Pick Genre To Associate :</h2>
                         <select
                         id="genre_id"
                         name="genre_id"
@@ -52,8 +52,8 @@ function GenreMovieAssociate({ movies, genres }) {
                             ))}
                         </select>
                 </div>
-                <div className="submit-button">
-                    <button type="submit">Associate Data!</button>
+                <div className="submit-button-container">
+                    <button className='submit-button' type="submit">Associate Data!</button>
                 </div>
             </form>
         </div>

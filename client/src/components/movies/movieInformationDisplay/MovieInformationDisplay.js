@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import './MovieInformationDisplay.scss'
 import MovieActorDisplay from "../movieActorDisplay/MovieActorDisplay";
 import MovieReviewListContainer from "../../movieReviews/movieReviewListContainer/MovieReviewListContainer";
+import MovieDirectorDisplay from "../movieDirectorDisplay/MovieDirectorDisplay";
+import MovieGenreDisplay from "../movieGenreDisplay/MovieGenreDisplay";
 
 
 
@@ -65,14 +67,21 @@ function MovieInformationDisplay() {
                 </div>
             </div>
             <div className="actor-display-card-container">
-                <h1 className="movie-info-text">Cast List:</h1>
+                <h1 className="movie-info-text">Cast List:{" "}</h1>
                 {singleMovie?.actors && <MovieActorDisplay actors={singleMovie.actors} />}
+            </div>
+            <div className="actor-display-card-container">
+                <h1 className="movie-info-text">Director:{" "}</h1>
+                {singleMovie?.directors && <MovieDirectorDisplay directors={singleMovie.directors} />}
+            </div>
+            <div className="actor-display-card-container">
+                <h1 className="movie-info-text">Genres:{" "}</h1>
+                {singleMovie?.genres && <MovieGenreDisplay genres={singleMovie.genres} />}
             </div>
             <div className="movie-review-page-container">
                 <h1>Reviews: </h1>
                 {singleMovie?.movie_reviews && <MovieReviewListContainer movieId={singleMovie.id} 
                 reviews={singleMovie.movie_reviews} />}
-                
             </div>
         </div>
     )

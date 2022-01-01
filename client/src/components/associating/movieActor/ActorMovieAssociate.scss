@@ -1,4 +1,64 @@
+@use '../../../assets/partials/colors';
+
 .form{
     display: flex;
     flex-direction: column;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: 7rem;
+    
+}
+
+select{
+    width: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 40px;
+    color: colors.$white;
+    text-align: center;
+    background: linear-gradient(colors.$gold, colors.$dark-grey);
+    box-shadow: 2px 2px 6px black;
+    margin: 1.5rem;
+}
+
+option{
+    color: colors.$white;
+    background: colors.$dark-grey;
+    width: 25%;
+    
+    
+}
+
+.submit-button{
+    margin-bottom: 3rem;
+    background-color: colors.$gold;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    width: 50%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    &:hover{
+        outline: 0;
+        background: colors.$gold;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+
+    &:focus{
+        outline: 0;
+        background: colors.$gold;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+    
 }

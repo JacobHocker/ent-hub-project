@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './PostMovieReview.scss';
 
 function PostMovieReview({ fixedMovieId, onAddMovieReview, fixedUserId }) {
     const [movieScore, setMovieScore] = useState("")
@@ -6,6 +7,10 @@ function PostMovieReview({ fixedMovieId, onAddMovieReview, fixedUserId }) {
     const [movieId, setMovieId] = useState("")
     const [userId, setUserId] = useState("")
 
+    const clearState = () => {
+        setMovieScore("")
+        setReviewContent("")
+    }
     function handleSubmit(event) {
         event.preventDefault()
         fetch("/movie_reviews", {
@@ -24,6 +29,7 @@ function PostMovieReview({ fixedMovieId, onAddMovieReview, fixedUserId }) {
         .then((newMovieReview) => onAddMovieReview(newMovieReview))
         .then(setMovieId(fixedMovieId))
         .then(setUserId(fixedUserId))
+        .then(clearState())
     }
 
     
@@ -45,6 +51,7 @@ function PostMovieReview({ fixedMovieId, onAddMovieReview, fixedUserId }) {
                     <textarea 
                         className='movie-review-input'
                         type="text"
+                        rows={5}
                         placeholder='Review...'
                         name='Review'
                         value={reviewContent}

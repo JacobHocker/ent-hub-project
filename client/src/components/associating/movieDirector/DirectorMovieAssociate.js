@@ -24,7 +24,7 @@ function DirectorMovieAssociate({ movies, directors }) {
 
     return(
         <div className="form">
-            <h1>Movie Director Association Area: </h1>
+            <h2>Movie Director Association Area: </h2>
             <form onSubmit={handleSubmit}>
                 <div className="movie-select">
                 <h2>Pick Movie To Associate :</h2>
@@ -40,7 +40,7 @@ function DirectorMovieAssociate({ movies, directors }) {
                         </select>
                 </div>
                 <div className="director-select">
-                    <h1>Pick Director To Associate :</h1>
+                    <h2>Pick Director To Associate :</h2>
                         <select
                         id="director_id"
                         name="director_id"
@@ -52,8 +52,8 @@ function DirectorMovieAssociate({ movies, directors }) {
                             ))}
                         </select>
                 </div>
-                <div className="submit-button">
-                    <button type="submit">Associate Data!</button>
+                <div className="submit-button-container">
+                    <button className='submit-button' type="submit">Associate Data!</button>
                 </div>
             </form>
         </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ActorMovieAssociate from '../movieActor/ActorMovieAssociate';
 import DirectorMovieAssociate from '../movieDirector/DirectorMovieAssociate';
 import GenreMovieAssociate from '../movieGenre/GenreMovieAssociate';
+import './AssociatingContainer.scss'
 
 
 function AssociatingContainer() {
@@ -40,6 +41,8 @@ function AssociatingContainer() {
 
     return(
         <div className='associating-container'>
+            <h1>Associations!</h1>
+            <p>After submitting to the site make the association between the actor, movie, director, or genre that it belongs to!</p>
             <ActorMovieAssociate movies={movies} actors={actors} />
             <DirectorMovieAssociate movies={movies} directors={directors} />
             <GenreMovieAssociate movies={movies}  genres={genres} />

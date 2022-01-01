@@ -6,7 +6,7 @@ function DirectorEditor({ directors, onUpdateDirector }) {
     const [directorImage, setDirectorImage] = useState("");
     const [netWorth, setNetWorth] = useState("");
        
-
+   
     function handleSubmit(event) {
         event.preventDefault()
         fetch(`/directors/${directorId}`, {
@@ -28,7 +28,7 @@ function DirectorEditor({ directors, onUpdateDirector }) {
     return(
         <div className='editor-container'>
         <div className="director-select">
-                <h1>Pick Director To Edit :</h1>
+                <h1>Pick Director To Edit:{" "}</h1>
                     <select
                     id="director_id"
                     name="director_id"
@@ -41,7 +41,7 @@ function DirectorEditor({ directors, onUpdateDirector }) {
                     </select>
             </div>
             <div className='director-post-form-container'>
-                <h1>Director Information Edit Field: </h1>
+                <h1>Director Information Edit Field:{" "}</h1>
                 <p>Important: When editing director information all fields must be filled out!</p>
                 <form onSubmit={handleSubmit} className='director-form'>
                     <div className='input-director'>
