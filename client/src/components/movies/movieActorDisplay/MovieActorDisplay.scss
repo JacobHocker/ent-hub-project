@@ -2,6 +2,7 @@
 
 .actor-display{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -27,6 +28,7 @@
 .actor-movie-display-image{
     width: 100%;
     height: 75%;
+    object-fit: cover;
 }
 
 .actor-movie-display-summary{

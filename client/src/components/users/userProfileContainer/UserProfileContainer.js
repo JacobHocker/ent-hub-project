@@ -24,7 +24,9 @@ function UserProfileContainer({ user}) {
             <h2>{user.username} Bio: </h2>
             <h3>{user.bio}</h3>
             <h1>Reviews left by {user.username}: </h1>
-            {userReviews}
+            <div className='user-review-cards'>
+             {userReviews}
+            </div>
         </div>
     )
 }

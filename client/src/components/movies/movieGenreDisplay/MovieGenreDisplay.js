@@ -44,7 +44,7 @@ function MovieGenreDisplay({ genres }) {
     const genreShow = genres.map((genre) => (
         <div className='genre-movie-display-container' key={genre.id}>
              <div className='genre-movie-display-card'>
-                 <img className='genre-movie-display-image' src={genre.genre_image} alt={genre.name} />
+                 <img className='genre-movie-display-image' src={genre.genre_picture} alt={genre.name} />
                  <div className='genre-movie-display-info'>
                      <h2>{genre.name}</h2>
                  </div>

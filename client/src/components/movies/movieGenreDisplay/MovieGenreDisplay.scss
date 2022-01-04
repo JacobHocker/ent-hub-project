@@ -2,6 +2,7 @@
 
 .genre-display{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -27,6 +28,7 @@
 .genre-movie-display-image{
     width: 100%;
     height: 75%;
+    object-fit: cover;
 }
 
 .genre-movie-display-summary{
