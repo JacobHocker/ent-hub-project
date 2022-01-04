@@ -27,7 +27,7 @@ function MovieGenreDisplay({ movies  }) {
     
     
     return(
-        <div className='movie-display'>
+        <div className='movie-genre-display'>
             {movieShow}
         </div>
     )

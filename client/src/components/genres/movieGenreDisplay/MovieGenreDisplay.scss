@@ -1,8 +1,9 @@
 @use '../../../assets/partials/colors';
 
-.movie-display{
+.movie-genre-display{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .movie-genre-display-card{
