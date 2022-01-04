@@ -44,3 +44,39 @@
 .director-list-display-card:hover .director-list-display-summary {
     transform: translateY(0%);
 }
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+}
+.director-list-button{
+    -webkit-appearance: none;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    background-color: colors.$dark-gold;
+    border-radius: 12px;
+    color: colors.$white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 2px 4px;
+    text-align: center;
+    transition: 200ms;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    &:hover{
+        outline: 0;
+        background: colors.$medium-grey;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+
+    &:focus{
+        outline: 0;
+        background: colors.$medium-grey;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+}

@@ -1,4 +1,5 @@
 @use '../../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
 .movie-info-display-container{
     display: flex;
@@ -6,8 +7,15 @@
     align-items: center;
 }
 
+.movie-info-display-container h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4.2rem;
+    color: colors.$gold;
+}
+
 .movie-info-poster-display{
-    width: 20rem;
+    width: 30rem;
+    box-shadow: 5px 5px 8px black;
 }
 
 .movie-display{

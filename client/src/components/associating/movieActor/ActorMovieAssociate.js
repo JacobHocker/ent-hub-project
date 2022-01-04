@@ -5,7 +5,7 @@ function ActorMovieAssociate({ movies, actors }) {
     const [movieId, setMovieId] = useState("")
     const [actorId, setActorId] = useState("")
 
-    const optionStyle = {}
+    
 
     function handleSubmit(event) {
         event.preventDefault()

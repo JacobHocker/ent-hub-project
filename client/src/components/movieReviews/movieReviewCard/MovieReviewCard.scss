@@ -1,4 +1,5 @@
 @use '../../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
 .review-user-pic{
     width: 4rem;
@@ -21,8 +22,10 @@
     background-image: linear-gradient( #7c7e7e, #FCC252, #7c7e7e )
 }
 
-.review-card h3{
-    color: colors.$dark-gold;
+.review-card h2{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    color: colors.$medium-grey;
 }
 
 .review-header{
@@ -68,7 +71,6 @@
 }
 
 .card-footer{
-    border-top: 1px solid colors.$medium-grey;
     display: flex;
     flex-direction: column;
     margin-top: 2rem;

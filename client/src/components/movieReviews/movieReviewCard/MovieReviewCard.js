@@ -43,15 +43,15 @@ function MovieReviewCard({ movieScore, reviewContent, userId, createdAt }) {
             </div>
             <div className="review-card-review-info">
                 <div className="card-rating">
-                <h3>Movie Score: </h3>
+                <h2>Movie Score: </h2>
                 {movieScoreSet()}
                 </div>
                 <div className="card-content">
-                    <h3>Review: </h3>
+                    <h2>Review: </h2>
                     <p>{reviewContent}</p>
                 </div>
                 <div className="card-footer">
-                    <p>Posted at: </p>
+                    <h2>Posted at: </h2>
                     <p>{createdAt}</p>
                 </div>
             </div>

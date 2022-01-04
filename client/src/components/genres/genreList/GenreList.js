@@ -14,7 +14,7 @@ function GenreList({ genres }) {
             <div className='genre-list-display-summary'>
                 <h4>Genre Description: </h4>
                 <p>{genre.description}</p>
-                <button>
+                <button className='genre-list-button'>
                     <NavLink to={`/genres/${genre.id}`}>
                         Learn More! 
                     </NavLink>

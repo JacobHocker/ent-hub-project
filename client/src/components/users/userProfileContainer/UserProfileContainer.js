@@ -1,4 +1,5 @@
 import React from 'react'
+import './UserProfileContainer.scss';
 import UserProfilePage from '../userProfilePage/UserProfilePage';
 
 function UserProfileContainer({ user}) {
@@ -20,7 +21,9 @@ function UserProfileContainer({ user}) {
         <div className='profile-container'>
             <h1>{user.username}</h1>
             <img src={user.image_url} alt={user.username} className='profile-page-profile-pic'/>
+            <h2>{user.username} Bio: </h2>
             <h3>{user.bio}</h3>
+            <h1>Reviews left by {user.username}: </h1>
             {userReviews}
         </div>
     )

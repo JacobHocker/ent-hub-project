@@ -54,40 +54,56 @@ useEffect(() => {
       </div>
       <div className="random-database-container">
         <div className="random-container">
-          <h3>Movie: </h3>
+          <div  className="random-header">
+            <h3>Movie: </h3>
+          </div>
           <div className="randomize-info">
             <h4>{randMovie.title}</h4>
             <img src={randMovie.movie_poster} alt={randMovie.title} className='randomize-image' />
+          </div>
+          <div className="random-footer">
             <Link to={`/movies/${randMovie.id}`}>
               <button className="home-page-button">Check It Out!</button>
             </Link>
           </div>
         </div>
         <div className="random-container">
-          <h3>Actor:  </h3>
+          <div  className="random-header">
+            <h3>Actor:  </h3>
+          </div>
           <div className="randomize-info">
             <h4>{randActor.name}</h4>
             <img src={randActor.actor_image} alt={randMovie.name} className='randomize-image' />
+          </div>
+          <div className="random-footer">
             <Link to={`/actors/${randActor.id}`}>
               <button className="home-page-button">Check Them Out!</button>
             </Link>
           </div>
         </div>
         <div className="random-container">
-          <h3>Director:  </h3>
+          <div  className="random-header">
+            <h3>Director:  </h3>
+          </div>
           <div className="randomize-info">
             <h4>{randDirector.name}</h4>
             <img src={randDirector.director_image} alt={randDirector.name} className='randomize-image' />
+          </div>
+          <div className="random-footer">
             <Link to={`/directors/${randDirector.id}`}>
               <button className="home-page-button">Check Them Out!</button>
             </Link>
           </div>
         </div>
         <div className="random-container">
-          <h3>Genre:  </h3>
+          <div  className="random-header">
+            <h3>Genre:  </h3>
+          </div>
           <div className="randomize-info">
             <h4>{randGenre.name}</h4>
             <img src={randGenre.genre_picture} alt={randGenre.name} className='randomize-image' />
+          </div>
+          <div className="random-footer">
             <Link to={`/genres/${randGenre.id}`}>
               <button className="home-page-button">Check It Out!</button>
             </Link>

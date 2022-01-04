@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './PostContainer.scss';
 import PostAMovie from '../moviePost/PostAMovie';
 import PostAnActor from '../actorPost/PostAnActor';
 import PostADirector from '../directorPost/PostADirector';
@@ -62,18 +63,22 @@ function PostContainer() {
         <div className='posting-container'>
             <div className='movie-post'>
                 <h1>Post A Movie</h1>
+                <p>Add a movie to our always growing database!</p>
                <PostAMovie movies={movies} onAddMovie={handleAddMovie} /> 
             </div>
             <div className='actor-post'>
                 <h1>Post A Actor</h1>
+                <p>Add an actor to our always growing database!</p>
                 <PostAnActor actors={actors} onAddActor={handleAddActor} />
             </div>
             <div className='director-post'>
                 <h1>Post A Director</h1>
+                <p>Add a director to our always growing database!</p>
                 <PostADirector directors={directors} onAddDirector={handleAddDirector} />
             </div>
             <div className='genre-post'>
                 <h1>Post A Genre</h1>
+                <p>Add a genre to our always growing database!</p>
                 <PostAGenre genres={genres} onAddGenre={handleAddGenre} />
             </div>
         </div>

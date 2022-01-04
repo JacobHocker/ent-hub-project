@@ -26,14 +26,16 @@ function MovieList({ id, moviePoster, movie, title, summary, onDeleteMovie }) {
             <div className='movie-list-display-summary'>
                 <h4>Movie Summary:</h4>
                 <p>{summary}</p>
-                <button>
-                    <NavLink to={`/movies/${id}`}>
-                        Learn More! 
-                    </NavLink>
-                </button>
-                <button onClick={handleDeleteClick}>
-                    Delete Movie
-                </button>
+                <div className='button-container'>
+                    <button className='movie-list-button'>
+                        <NavLink to={`/movies/${id}`}>
+                            Learn More! 
+                        </NavLink>
+                    </button>
+                    <button className='movie-list-button' onClick={handleDeleteClick}>
+                        Delete Movie
+                    </button>
+                </div>
             </div>
         </div>
         </div>

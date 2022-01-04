@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './EditorContainer.scss';
 import ActorEditor from '../actorEditor/ActorEditor';
 import DirectorEditor from '../directorEditor/DirectorEditor';
 import MovieEditor from '../movieEditor/MovieEditor';
@@ -52,7 +53,9 @@ function EditorContainer() {
     };
 
     return(
-        <div className='editor-container'>
+        <div className='all-editor-container'>
+            <h1>Editor Page!</h1>
+            <p>Here you can edit certain attributes of our databases!</p>
             <MovieEditor movies={movies} onUpdateMovie={handleUpdateMovie} />
             <ActorEditor actors={actors} onUpdateActor={handleUpdateActor} />
             <DirectorEditor directors={directors} onUpdateDirector={handleUpdateDirector} />

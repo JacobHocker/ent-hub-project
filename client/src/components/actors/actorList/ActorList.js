@@ -26,14 +26,16 @@ function ActorList({ actor, id, name, briefHistory, actorImage, onDeleteActor })
                 <div className='actor-list-display-summary'>
                     <h4>Actor History: </h4>
                     <p>{briefHistory}</p>
-                    <button>
-                        <NavLink to={`/actors/${id}`}>
-                            Learn More! 
-                        </NavLink>
-                    </button>
-                    <button onClick={handleDeleteClick}>
-                        Delete Actor
-                    </button>
+                    <div className='button-container'>
+                        <button className='actor-list-button'>
+                            <NavLink to={`/actors/${id}`}>
+                                Learn More! 
+                            </NavLink>
+                        </button>
+                        <button className='actor-list-button' onClick={handleDeleteClick}>
+                            Delete Actor
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -34,7 +34,7 @@ function GenreInformationDisplay() {
                 </div>
             </div>
             <div className="genre-display-card-container">
-                <h1 className="movie-info-text">Movies Directed: </h1>
+                <h1 className="movie-info-text">Movies In This Genre: </h1>
                  {singleGenre?.movies && <MovieGenreDisplay movies={singleGenre.movies} />} 
             </div>
         </div>

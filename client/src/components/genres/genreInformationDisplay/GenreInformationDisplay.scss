@@ -6,8 +6,15 @@
     align-items: center;
 }
 
+.genre-info-display-container h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4.2rem;
+    color: colors.$gold;
+}
+
 .genre-info-poster-display{
-    width: 20rem;
+    width: 30rem;
+    box-shadow: 5px 5px 8px black;
 }
 
 .genre-display{

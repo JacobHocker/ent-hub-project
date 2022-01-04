@@ -1,0 +1,10 @@
+@use '../../../assets/partials/colors';
+
+.posting-container h1{
+    color: colors.$gold;
+    font-size: 2.5rem;
+}
+
+.posting-container p {
+    font-size: 1.5rem;
+}

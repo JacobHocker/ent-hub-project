@@ -70,6 +70,7 @@ function PostAnActor({ onAddActor }) {
                     <textarea 
                         className='actor-input'
                         type="text"
+                        rows={5}
                         placeholder='A Brief History About Actor'
                         name='Brief History'
                         value={briefHistory}
@@ -80,6 +81,7 @@ function PostAnActor({ onAddActor }) {
                     <textarea 
                         className='actor-input'
                         type="text"
+                        rows={5}
                         placeholder='Actor Accomplishments'
                         name='Accomplishments'
                         value={accomplishments}

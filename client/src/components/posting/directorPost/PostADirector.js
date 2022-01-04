@@ -61,6 +61,7 @@ function PostADirector({ onAddDirector }) {
                     <textarea 
                         className='director-input'
                         type="text"
+                        rows={5}
                         placeholder='A Brief History About Director'
                         name='Brief History'
                         value={briefHistory}
@@ -71,6 +72,7 @@ function PostADirector({ onAddDirector }) {
                     <textarea 
                         className='director-input'
                         type="text"
+                        rows={5}
                         placeholder='Director Accomplishments'
                         name='Accomplishments'
                         value={accomplishments}

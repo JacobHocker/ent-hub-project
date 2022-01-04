@@ -53,16 +53,20 @@
 .random-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
 }
 
 .random-container h3{
     color: colors.$gold;
-    font-size: 2.25rem;
+    font-size: 3.25rem;
 }
 
 .randomize-info{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .randomize-info h4{
@@ -79,7 +83,7 @@
     padding: 10px 15px;
     text-align: center;
     transition: 200ms;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     border: 0;
     font-size: 16px;

@@ -72,6 +72,7 @@ function PostAMovie({ onAddMovie }) {
                     <textarea 
                         className='movie-input'
                         type="text"
+                        rows={5}
                         placeholder='Movie Summary'
                         name='Movie Summary'
                         value={summary}
@@ -82,6 +83,7 @@ function PostAMovie({ onAddMovie }) {
                     <textarea 
                         className='movie-input'
                         type="text"
+                        rows={5}
                         placeholder='Movie Awards'
                         name='Movie Awards'
                         value={awards}

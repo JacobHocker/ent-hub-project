@@ -40,7 +40,7 @@ puts
 
 Genre.create!(genre_picture: "https://thumbs.dreamstime.com/z/movie-genres-icons-vector-10044244.jpg", name: "Test Genre #1", description: "Test for database purposes")
 Genre.create!(genre_picture: "https://thumbs.dreamstime.com/z/movie-genres-icons-vector-10044244.jpg", name: "Test Genre #2", description: "Test for database purposes")
-Genre.create!(genre_picture: "https://static.wikia.nocookie.net/aesthetics/images/c/cd/Fantasy_World.jpg/revision/latest?cb=20201122150254", name: "Fantasy", description: "Fantasy is a genre of speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama")
+Genre.create!(genre_picture: "http://www.rantingdragon.com/wp-content/uploads/big8.jpg", name: "Fantasy", description: "Fantasy is a genre of speculative fiction involving magical elements, typically set in a fictional universe and sometimes inspired by mythology and folklore. Its roots are in oral traditions, which then became fantasy literature and drama")
 
  
 

@@ -1,0 +1,18 @@
+@use '../../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+
+.profile-container h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4.2rem;
+    color: colors.$gold;
+}
+
+.profile-container h2{
+    font-size: 2.2rem;
+    color: colors.$gold;
+}
+
+.profile-page-profile-pic{
+    width: 20rem;
+    box-shadow: 5px 5px 10px black;
+}

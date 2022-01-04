@@ -55,6 +55,7 @@ function PostAGenre({ onAddGenre }) {
                     <textarea 
                         className='genre-input'
                         type="text"
+                        rows={5}
                         placeholder='Description Of Genre'
                         name='Description'
                         value={description}

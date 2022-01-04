@@ -25,14 +25,16 @@ function DirectorList({ director, id, name, briefHistory, directorImage, onDelet
                 <div className='director-list-display-summary'>
                     <h4>Director History: </h4>
                     <p>{briefHistory}</p>
-                    <button>
-                        <NavLink to={`/directors/${id}`}>
-                            Learn More! 
-                        </NavLink>
-                    </button>
-                    <button onClick={handleDeleteClick}>
-                        Delete Director
-                    </button>
+                    <div className='button-container'>
+                        <button className='director-list-button'>
+                            <NavLink to={`/directors/${id}`}>
+                                Learn More! 
+                            </NavLink>
+                        </button>
+                        <button className='director-list-button' onClick={handleDeleteClick}>
+                            Delete Director
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
