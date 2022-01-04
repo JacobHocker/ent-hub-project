@@ -31,6 +31,10 @@
     font-size: 1.5rem;
     border-radius: 50px;
     background-color: transparent;
+    &:focus{
+        background-color: #7c7e7eb4;
+        transition:  0.3s ease-in-out;
+    }
 }
 
 .director-search-bar::placeholder{

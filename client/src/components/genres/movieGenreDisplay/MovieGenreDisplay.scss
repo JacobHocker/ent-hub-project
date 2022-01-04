@@ -16,6 +16,11 @@
     position: relative;
 }
 
+.movie-genre-display-card h3{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+}
+
 .movie-genre-display-info{
     display: flex;
     align-items: center;
@@ -30,7 +35,7 @@
 }
 
 .movie-genre-display-summary{
-    background-color: colors.$light-grey;
+    background-color: colors.$dark-grey;
     position: absolute;
     padding: 1rem;
     bottom: 0;

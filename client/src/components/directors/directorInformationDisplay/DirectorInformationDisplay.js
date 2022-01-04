@@ -27,26 +27,26 @@ function DirectorInformationDisplay() {
                 <h1>{singleDirector.name}</h1>
                 <img src={singleDirector.director_image} className="director-info-poster-display" alt={singleDirector.name} />
                 <div className="director-display-information-container">
-                    <div className="director-display">
-                        <h2 className="director-info-text">Director History: </h2>
-                        <h4 className="director-p">{singleDirector.brief_history}</h4>
+                    <div className="director-page-display">
+                        <h2 className="director-page-info-text">Director History: </h2>
+                        <h4 className="director-page-p">{singleDirector.brief_history}</h4>
                     </div>
                     <>
-                    <div className="director-display">
-                        <h2 className="director-info-text">Birth Date: </h2>
-                        <h4 className="director-p">{singleDirector.birth_date}</h4>
-                    </div>
-                    </>
-                    <>
-                    <div className="director-display">
-                        <h2 className="director-info-text">Notable Accomplishments: </h2>
-                        <h4 className="director-p">{singleDirector.accomplishments}</h4>
+                    <div className="director-page-display">
+                        <h2 className="director-page-info-text">Birth Date: </h2>
+                        <h4 className="director-page-p">{singleDirector.birth_date}</h4>
                     </div>
                     </>
                     <>
-                    <div className="director-display">
-                        <h2 className="director-info-text">Net Worth: </h2>
-                        <h4 className="director-p">{singleDirector.net_worth}</h4>
+                    <div className="director-page-display">
+                        <h2 className="director-page-info-text">Notable Accomplishments: </h2>
+                        <h4 className="director-page-p">{singleDirector.accomplishments}</h4>
+                    </div>
+                    </>
+                    <>
+                    <div className="director-page-display">
+                        <h2 className="director-page-info-text">Net Worth: </h2>
+                        <h4 className="director-page-p">{singleDirector.net_worth}</h4>
                     </div>
                     </>
                 </div>

@@ -50,13 +50,13 @@ function DirectorMovieDisplay({ movies  }) {
             <div className='movie-director-display-card'>
                 <img className='movie-director-display-image' src={movie.movie_poster} alt={movie.title} />
                 <div className='movie-director-display-info'>
-                    <h2>{movie.title}</h2>
+                    <h3>{movie.title}</h3>
                 </div>
                 <div className='movie-director-display-summary'>
-                    <h2>Movie Summary: </h2>
+                    <h3>Movie Summary: </h3>
                     <p>{movie.summary}</p>
                     <Link to={`/movies/${movie.id}`} >
-                        <button>
+                        <button className='movie-info-button'>
                             Learn More!
                         </button>
                     </Link>

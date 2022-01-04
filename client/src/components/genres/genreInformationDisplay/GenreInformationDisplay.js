@@ -27,9 +27,9 @@ function GenreInformationDisplay() {
                 <h1>{singleGenre.name}</h1>
                 <img src={singleGenre.genre_picture} className="genre-info-poster-display" alt={singleGenre.name} />
                 <div className="genre-display-information-container">
-                    <div className="genre-display">
-                        <h2 className="genre-info-text">Genre Description: </h2>
-                        <h4 className="genre-p">{singleGenre.description}</h4>
+                    <div className="genre-page-display">
+                        <h2 className="genre-page-info-text">Genre Description: </h2>
+                        <h4 className="genre-page-p">{singleGenre.description}</h4>
                     </div>
                 </div>
             </div>

@@ -34,26 +34,26 @@ function ActorInformationDisplay() {
                     title='Actor Trailer'
                 />
                 <div className="actor-display-information-container">
-                    <div className="actor-display">
-                        <h2 className="actor-info-text">Actor History: </h2>
-                        <h4 className="actor-p">{singleActor.brief_history}</h4>
+                    <div className="actor-page-display">
+                        <h2 className="actor-page-info-text">Actor History: </h2>
+                        <h4 className="actor-page-p">{singleActor.brief_history}</h4>
                     </div>
                     <>
-                    <div className="actor-display">
-                        <h2 className="actor-info-text">Birth Date: </h2>
-                        <h4 className="actor-p">{singleActor.birth_date}</h4>
-                    </div>
-                    </>
-                    <>
-                    <div className="actor-display">
-                        <h2 className="actor-info-text">Notable Accomplishments: </h2>
-                        <h4 className="actor-p">{singleActor.accomplishments}</h4>
+                    <div className="actor-page-display">
+                        <h2 className="actor-page-info-text">Birth Date: </h2>
+                        <h4 className="actor-page-p">{singleActor.birth_date}</h4>
                     </div>
                     </>
                     <>
-                    <div className="actor-display">
-                        <h2 className="actor-info-text">Net Worth: </h2>
-                        <h4 className="actor-p">{singleActor.net_worth}</h4>
+                    <div className="actor-page-display">
+                        <h2 className="actor-page-info-text">Notable Accomplishments: </h2>
+                        <h4 className="actor-page-p">{singleActor.accomplishments}</h4>
+                    </div>
+                    </>
+                    <>
+                    <div className="actor-page-display">
+                        <h2 className="actor-page-info-text">Net Worth: </h2>
+                        <h4 className="actor-page-p">{singleActor.net_worth}</h4>
                     </div>
                     </>
                 </div>

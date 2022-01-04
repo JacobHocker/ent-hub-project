@@ -1,10 +1,11 @@
 @use '../../../assets/partials/colors';
 
 .associating-container h1{
-    font-size: 4rem;
     color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5.5rem;
 }
 
 .associating-container p{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }

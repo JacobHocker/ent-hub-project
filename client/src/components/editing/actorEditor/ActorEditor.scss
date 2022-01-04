@@ -1,4 +1,17 @@
+@use '../../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+
 .form{
     display: flex;
     flex-direction: column;
+}
+
+.editor-container h1{
+    color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+}
+
+.editor-container p{
+    font-size: 1.5rem;
 }

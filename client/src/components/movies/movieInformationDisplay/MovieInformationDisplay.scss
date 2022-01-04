@@ -10,7 +10,7 @@
 .movie-info-display-container h1{
     font-family: 'Rajdhani', sans-serif;
     text-shadow: 2px 2px 4px black;
-    font-size: 4.2rem;
+    font-size: 5.5rem;
     color: colors.$gold;
 }
 
@@ -30,6 +30,21 @@
 .movie-display h2{
     font-family: 'Rajdhani', sans-serif;
     font-size: 2.75rem;
+}
+
+.genre-movie-display-card h2{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.75rem;
+}
+
+.director-movie-display-card h2{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.75rem;
+}
+
+.actor-movie-display-card h2{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.75rem;
 }
 
 .movie-p{

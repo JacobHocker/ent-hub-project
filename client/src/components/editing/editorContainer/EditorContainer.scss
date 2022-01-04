@@ -1,2 +1,11 @@
 @use '../../../assets/partials/colors';
 
+.all-editor-container h1{
+    color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5rem;
+}
+
+.all-editor-container p{
+    font-size: 2rem;
+}

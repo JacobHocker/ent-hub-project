@@ -9,7 +9,8 @@
 
 .director-info-display-container h1{
     font-family: 'Rajdhani', sans-serif;
-    font-size: 4.2rem;
+    text-shadow: 2px 2px 4px black;
+    font-size: 5.5rem;
     color: colors.$gold;
 }
 
@@ -18,21 +19,28 @@
     box-shadow: 5px 5px 8px black;
 }
 
-.director-display{
+.director-page-display{
     display: flex;
-    align-items: baseline;
-    margin-left: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
 }
 
-.director-p{
-    font-size: 1.25rem;
+.director-page-p{
+    font-size: 1.75rem;
+    margin: 1rem;
 }
 
+.director-page-display h2{
+    font-family: 'Rajdhani', sans-serif;
+    color: colors.$gold;
+    font-size: 2.75rem;
+}
 
 .director-info-text{
     color: colors.$gold;
-    font-size: 2.5rem;
-    padding-right: 3rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5rem;
 }
 
 

@@ -1,4 +1,5 @@
 @use '../../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
 .form{
     display: flex;
@@ -7,6 +8,18 @@
     border-radius: 50px;
     margin: 7rem;
     
+}
+
+.form h1{
+    color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4rem;
+}
+
+.form h2{
+    color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.5rem;
 }
 
 select{

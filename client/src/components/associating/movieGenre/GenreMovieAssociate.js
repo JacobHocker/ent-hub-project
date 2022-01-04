@@ -24,7 +24,7 @@ function GenreMovieAssociate({ movies, genres }) {
 
     return(
         <div className="form">
-            <h2>Movie Genre Association Area: </h2>
+            <h1>Genre-Movie Association Area: </h1>
             <form onSubmit={handleSubmit}>
                 <div className="movie-select">
                 <h2>Pick Movie To Associate :</h2>

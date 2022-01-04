@@ -24,7 +24,7 @@ function DirectorMovieAssociate({ movies, directors }) {
 
     return(
         <div className="form">
-            <h2>Movie Director Association Area: </h2>
+            <h1>Director-Movie Association Area: </h1>
             <form onSubmit={handleSubmit}>
                 <div className="movie-select">
                 <h2>Pick Movie To Associate :</h2>

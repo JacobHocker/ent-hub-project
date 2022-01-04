@@ -1,4 +1,5 @@
 @use '../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
 .welcome-area{
     display: flex;
@@ -9,7 +10,8 @@
 
 .welcome-area h1{
     color: colors.$gold;
-    font-size: 4rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5rem;
 }
 
 .about-site-container{
@@ -19,9 +21,10 @@
     align-items: center;
 }
 
-.about-site-container h2{
+.about-site-container h1{
     color: colors.$gold;
-    font-size: 3.2rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5rem;
 }
 
 .about-site-container p{
@@ -30,8 +33,16 @@
 
 .random-database-description{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-size: 2.25rem;
+}
+
+.random-database-description h1{
+    color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5rem;
 }
 
 .randomize-image{
@@ -44,10 +55,8 @@
 .random-database-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
 }
 
 .random-container{
@@ -55,11 +64,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 1rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    
 }
 
 .random-container h3{
     color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 3.25rem;
 }
 
@@ -67,11 +79,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
-.randomize-info h4{
-    font-size: 1.75rem;
-}
+
+
+
 
 .home-page-button{
     margin-top: 2rem;
