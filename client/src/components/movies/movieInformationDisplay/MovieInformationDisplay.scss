@@ -9,6 +9,7 @@
 
 .movie-info-display-container h1{
     font-family: 'Rajdhani', sans-serif;
+    text-shadow: 2px 2px 4px black;
     font-size: 4.2rem;
     color: colors.$gold;
 }
@@ -20,19 +21,27 @@
 
 .movie-display{
     display: flex;
-    align-items: baseline;
-    margin-left: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+.movie-display h2{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.75rem;
 }
 
 .movie-p{
-    font-size: 1.25rem;
+    font-size: 1.75rem;
+    margin: 1rem;
 }
 
 
 .movie-info-text{
     color: colors.$gold;
-    font-size: 2.5rem;
-    padding-right: 3rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5rem;
 }
 
 
@@ -40,8 +49,9 @@
 
 .movie-trailer-display{
     margin: 2rem 2rem 2rem 2rem;
-    width: 36rem;
-    height: 22rem;
+    width: 56rem;
+    height: 32rem;
+    box-shadow:  5px 5px 8px black;
 }
 
 .movie-review-page-container{
@@ -51,6 +61,7 @@
 }
 
 .movie-review-page-container h1{
+    font-family: 'Rajdhani', sans-serif;
     color: colors.$gold;
-    font-size: 2.5rem;
+    font-size: 5rem;
 }

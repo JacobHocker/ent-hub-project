@@ -9,9 +9,9 @@ function MovieSearchBar({ searchTerm, onChangeSearch }) {
     }
 
     return(
-        <div className='search-bar-container'>
-            <div className='search-bar'>
-                <GoSearch  className='search-icon'/>
+        <div className='movie-search-bar-container'>
+            <div className='search-bar-movie'>
+                <GoSearch  className='search-icon-movie'/>
                 <input 
                 className='movie-search-bar'
                 type='text'

@@ -21,7 +21,7 @@ function MovieList({ id, moviePoster, movie, title, summary, onDeleteMovie }) {
             <div key={id} className='movie-list-display-card'>
             <img src={moviePoster} alt={title} className='movie-list-display-image' />
             <div className='movie-list-display-info'>
-                <h4>{title}</h4>
+                <h3>{title}</h3>
             </div>
             <div className='movie-list-display-summary'>
                 <h4>Movie Summary:</h4>

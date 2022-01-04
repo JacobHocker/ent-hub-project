@@ -1,4 +1,5 @@
 @use '../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
 .navbar-container{
     border-bottom: 0.20rem solid colors.$gold;
@@ -32,20 +33,27 @@
 .nav-link{
     display: flex;
     align-items: center;
-    font-size: 1.50rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.75rem;
+    font-family: 'Rajdhani', sans-serif;
     color: colors.$white;
     text-decoration: none;
     height: 50%;
     margin-left: 2rem;;
     
     &:hover{
-        background-color: colors.$dark-grey;
-        color: colors.$dark-gold;
-        border-radius: 3px;
-        box-shadow: 1px 1px 2px colors.$white;
+        background-color: colors.$dark-gold;
+        color: colors.$white;
+        border-radius: 5px;
+      //  box-shadow: 1px 1px 2px colors.$white;
         overflow: hidden;
-        transition: transform 0.4s ease-in;
+        transition: transform 0.9s  ease-in-out;
+    }
+
+    &:active{
+        background-color: colors.$dark-gold;
+        color: colors.$white;
+        border-radius: 5px;
+        overflow: hidden;
     }
   
 }

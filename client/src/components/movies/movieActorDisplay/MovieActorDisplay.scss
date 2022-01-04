@@ -7,7 +7,7 @@
 }
 
 .actor-movie-display-card{
-    width: 250px;
+    width: 300px;
     height: 475px;
     margin: 1rem;
     background-color: colors.$medium-grey;
@@ -32,7 +32,7 @@
 }
 
 .actor-movie-display-summary{
-    background-color: colors.$light-grey;
+    background-color: colors.$dark-grey;
     position: absolute;
     padding: 1rem;
     bottom: 0;
@@ -44,6 +44,38 @@
 
 .actor-movie-display-card:hover .actor-movie-display-summary{
     transform: translateY(0%);
+}
+
+.movie-info-button{
+    -webkit-appearance: none;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    background-color: colors.$dark-gold;
+    border-radius: 12px;
+    color: colors.$white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    &:hover{
+        outline: 0;
+        background: colors.$medium-grey;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+
+    &:focus{
+        outline: 0;
+        background: colors.$medium-grey;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
 }
 
 .left-arrow{

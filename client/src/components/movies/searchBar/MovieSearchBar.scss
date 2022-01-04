@@ -1,11 +1,11 @@
 @use '../../../assets/partials/colors';
 
-.search-bar-container{
+.movie-search-bar-container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.search-bar{
+.search-bar-movie{
     display: flex;
     align-items: center;
     margin-top: 3rem;
@@ -15,10 +15,11 @@
     font-size: 1.5rem;
     border-radius: 50px;
     background-color: transparent;
-    
 }
 
-.search-icon{
+
+
+.search-icon-movie{
     margin-left: 1rem;
 }
 
@@ -31,6 +32,10 @@
     font-size: 1.5rem;
     border-radius: 50px;
     background-color: transparent;
+    &:focus{
+        background-color: #7c7e7eb4;
+        transition:  0.3s ease-in-out;
+    }
 }
 
 .movie-search-bar::placeholder{

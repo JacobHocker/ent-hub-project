@@ -1,4 +1,5 @@
 @use '../../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
 .movie-review-list-container{
     display: flex;
@@ -8,5 +9,6 @@
 
 .movie-review-post-container h3{
     color: colors.$gold;
-    font-size: 2.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5rem;
 }

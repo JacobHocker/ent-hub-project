@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './MovieActorDisplay.scss';
 //import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
@@ -55,11 +55,11 @@ function MovieActorDisplay({ actors  }) {
                 <div className='actor-movie-display-summary'>
                     <h2>Actor History:</h2>
                     <p>{actor.brief_history}</p>
-                    <Link to={`/actors/${actor.id}`}>
-                        <button>
+                    <button className='movie-info-button'>
+                        <NavLink to={`/actors/${actor.id}`}>
                             Learn More!
-                        </button>
-                    </Link>
+                        </NavLink>
+                    </button>
                 </div>   
             </div>
         </div>

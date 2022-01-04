@@ -12,20 +12,21 @@
     width: 50%;
     padding: 8px 16px;
     line-height: 25px;
-    font-size: 14px;
+    font-size: 1.25rem;
     font-weight: 500;
     font-family: inherit;
     border-radius: 6px;
     -webkit-appearance: none;
-    color: colors.$gold;
-    border: 1px solid colors.$light-grey;
-    background: linear-gradient(colors.$black, colors.$medium-grey, colors.$dark-grey, colors.$medium-grey, colors.$black );
+    color: colors.$white;
+    border: 2px solid colors.$light-grey;
+    background: #7c7e7e85;
     transition: border .3s ease;
     &::placeholder {
         color: colors.$white;
     }
     &:focus {
         outline: none;
-        border-color: colors.$white;
+        background: #7c7e7ed7;
+        transform: 0.5s ease-in;
     }
 }
