@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.aefe6e0e.chunk.css",
+    "main.js": "/static/js/main.6f34f352.chunk.js",
+    "main.js.map": "/static/js/main.6f34f352.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2cd2efc9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2cd2efc9.js.map",
+    "static/js/2.5f2a2d53.chunk.js": "/static/js/2.5f2a2d53.chunk.js",
+    "static/js/2.5f2a2d53.chunk.js.map": "/static/js/2.5f2a2d53.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.aefe6e0e.chunk.css.map": "/static/css/main.aefe6e0e.chunk.css.map",
+    "static/js/2.5f2a2d53.chunk.js.LICENSE.txt": "/static/js/2.5f2a2d53.chunk.js.LICENSE.txt",
+    "static/media/eh-nav-logo-large.0b7394cb.png": "/static/media/eh-nav-logo-large.0b7394cb.png",
+    "static/media/entertainment-hub-logo.e20c22e9.png": "/static/media/entertainment-hub-logo.e20c22e9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2cd2efc9.js",
+    "static/js/2.5f2a2d53.chunk.js",
+    "static/css/main.aefe6e0e.chunk.css",
+    "static/js/main.6f34f352.chunk.js"
+  ]
+}
