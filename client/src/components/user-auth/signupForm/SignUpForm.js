@@ -92,7 +92,7 @@ function SignUpForm({ onLogin }) {
           <textarea
             className="sign-up-input"
             placeholder="Write a brief bio about yourself..."
-            rows="3"
+            rows={3}
             id="bio"
             value={bio}
             onChange={(e) => setBio(e.target.value)}

@@ -8,9 +8,10 @@ $color-white: colors.$gold;
 
 
 .sign-up-input{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    resize: none;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.75rem;
     letter-spacing: -0.2px;
-    font-size: 17px;
     border: 0;
     outline: 0;
     border-radius: $ruler*20;

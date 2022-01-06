@@ -1,5 +1,5 @@
 @use '../../../assets/partials/colors';
-
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 $ruler: 18px;
 $color-red: colors.$light-grey;
 $color-bg: colors.$white;
@@ -13,9 +13,10 @@ $color-white: colors.$gold;
 }
 
 .login-input{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.75rem;
     letter-spacing: -0.2px;
-    font-size: $ruler;
+  
     border: 0;
     outline: 0;
     border-radius: $ruler*20;
@@ -37,12 +38,11 @@ $color-white: colors.$gold;
 }
 
 .login-button{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: -0.2px;
-    font-size: $ruler;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+    letter-spacing: -0.2px;  
     border: 0;
     outline: 0;
-    font-size: $ruler;
     border-radius: $ruler*20;
     padding: $ruler;
     background-color:$color-red;

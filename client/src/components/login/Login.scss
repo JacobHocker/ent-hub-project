@@ -1,6 +1,6 @@
 /* The centering for the whole log in page */
 @use '../../assets/partials/colors';
-
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
 $ruler: 18px;
 $color-red: colors.$light-grey;
@@ -8,51 +8,61 @@ $color-bg: colors.$white;
 $color-shadow: colors.$dark-grey;
 $color-white: colors.$gold;
 
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container h3{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.0rem;
+}
 .login-area{
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    z-index: 15;
-    top: 50%;
-    left: 50%;
-    margin: -100px 0 0 -150px;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-page-logo{ 
-  width: 30rem;
+  width: 40rem;
   padding-bottom: 0.2rem;
   
 }
 
 .sign-up-container{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-container h3{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.0rem;
 }
 
 .sign-up-button{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: -0.2px;
-    font-size: $ruler;
-    border: 0;
-    outline: 0;
-    font-size: $ruler;
-    border-radius: $ruler*20;
-    padding: $ruler;
-    background-color:$color-red;
-   // text-shadow: 1px 1px 0 $color-white;
-    margin-bottom: $ruler*1.5;
-    margin-right: $ruler/2;
-    box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-shadow;
-    width: 100%;
-    box-sizing: border-box;
-    transition: all 0.2s ease-in-out;
-    appearance: none;
-    -webkit-appearance: none;
-
-    &:focus {
-        box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
-    }
-    color:#61677C;
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: -0.2px;
+  font-size: 1.5rem;
+  border: 0;
+  outline: 0;
+  border-radius: $ruler*20;
+  padding: $ruler;
+  background-color:$color-red;
+  // text-shadow: 1px 1px 0 $color-white;
+  margin-bottom: $ruler*1.5;
+  margin-right: $ruler/2;
+  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-shadow;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  &:focus {
+      box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+  color:#61677C;
   font-weight: bold;
   box-shadow: -5px -5px 5px $color-white,  5px 5px 5px $color-shadow;
   transition: all 0.2s ease-in-out;
