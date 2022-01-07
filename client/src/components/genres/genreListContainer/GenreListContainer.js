@@ -18,11 +18,29 @@ function GenreListContainer() {
     const genresToDisplay = genres.filter((genre) => 
     genre.name.toLowerCase().includes(searchTerm.toLowerCase()))
   
+    function handleDeleteGenre(id) {
+        const updatedGenres = genres.filter((genre) => genre.id !== id)
+        setGenres(updatedGenres);
+    }
+
+    const genreCards = genresToDisplay.map((genre) => (
+        <GenreList
+        key={genre.id}
+        id={genre.id}
+        onDeleteGenre={handleDeleteGenre}
+        genrePicture={genre.genre_picture}
+        name={genre.name}
+        description={genre.description}
+        genre={genre}
+        />
+    ))
+
+
     return(
         <div className='genres-list-page'>
             <GenreSearchBar searchTerm={searchTerm} onChangeSearch={setSearchTerm} />
             <div className="genres-list-container">
-                <GenreList genres={genresToDisplay} />
+                {genreCards}
             </div>
         </div>
     )
