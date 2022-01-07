@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import './NavBar.scss';
 import  image1  from "../../assets/pictures/eh-nav-logo-large.png";
@@ -6,9 +6,7 @@ import  image1  from "../../assets/pictures/eh-nav-logo-large.png";
 
 
 function NavBar({ user, setUser }) {
-  const [click, setClick] = useState(false); 
-
-  const handleClick = () => setClick(!click);
+  
 
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {

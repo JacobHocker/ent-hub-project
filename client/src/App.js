@@ -16,6 +16,7 @@ import DirectorInformationDisplay from "./components/directors/directorInformati
 import GenreInformationDisplay from "./components/genres/genreInformationDisplay/GenreInformationDisplay";
 import UserProfileContainer from "./components/users/userProfileContainer/UserProfileContainer";
 import AdminLinking from "./components/adminLinking/AdminLinking";
+import Contact from "./components/contact/Contact";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="admin" element={<AdminLinking />} />
         <Route path="users/:id" element={<UserProfileContainer user={user} />} />
       </Routes>
+      <Contact />
     </div>
   );
 };
