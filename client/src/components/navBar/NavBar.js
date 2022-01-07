@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import './NavBar.scss';
 import  image1  from "../../assets/pictures/eh-nav-logo-large.png";
@@ -6,6 +6,10 @@ import  image1  from "../../assets/pictures/eh-nav-logo-large.png";
 
 
 function NavBar({ user, setUser }) {
+  const [click, setClick] = useState(false); 
+
+  const handleClick = () => setClick(!click);
+
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
@@ -17,28 +21,34 @@ function NavBar({ user, setUser }) {
   
   return (
     <div className="navbar-container">
-      <nav>
+      <div className="eh-logo-container">
         <Link to="/">
           <img src={image1} className="eh-logo-nav" alt="eh-logo" />
         </Link>
-      </nav>
+      </div>
       <div className='nav-display-container'>
-          <nav className='nav-items'>
-            <NavLink className='nav-link' to="/">Home</NavLink>
-            <NavLink className='nav-link' to="/movies">Movies</NavLink>
-            <NavLink className='nav-link' to='/actors'>Actors</NavLink>
-            <NavLink className='nav-link' to='/directors'>Directors</NavLink>
-            <NavLink className='nav-link' to='/genres'>Genres</NavLink>
-            <NavLink className='nav-link' to='/post'>Post</NavLink> 
-            <NavLink className='nav-link' to='/associate'>Associate</NavLink> 
-            <NavLink className='nav-link' to='/edit'>Edit</NavLink> 
-          </nav>
+            <div className="nav-items">
+              <NavLink className='nav-link' to="/movies">Movies{" "}|</NavLink>
+            </div>
+            <div className="nav-items">
+              <NavLink className='nav-link' to='/actors'>|{" "}Actors{" "}|</NavLink>
+            </div>
+            <div className="nav-items">
+              <NavLink className='nav-link' to='/directors'>|{" "}Directors{" "}|</NavLink>
+            </div>
+            <div className="nav-items">
+              <NavLink className='nav-link' to='/genres'>|{" "}Genres{" "}|</NavLink>
+            </div>
+            <div className="nav-items">
+              <NavLink className='nav-link' to='/admin'>|{" "}Admin</NavLink>  
+            </div>
       </div>
       <div className="nav-user-info-container">
         <img className="nav-user-pic" src={user.image_url} alt={user.username} />
         <Link to={`/users/${user.id}`}>
           <h4 className="nav-username">{user.username}</h4>
         </Link>
+        <div className="nav-log-out-button"></div>
         <button  className="nav-log-out" onClick={handleLogoutClick}>
             Logout
         </button>

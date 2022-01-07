@@ -2,7 +2,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # structure change datetime to time arguments in order (year month date)
+puts "Destroying Data..."
+puts 
+Movie.destroy_all 
+Actor.destroy_all 
+Director.destroy_all 
+Genre.destroy_all 
+MovieReview.destroy_all 
+User.destroy_all 
 
+puts "Finished Destroying Data..."
+puts 
 puts "Creating Seeds..."
 puts 
 

@@ -1,0 +1,76 @@
+@use '../../assets/partials/colors';
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+
+.admin-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.admin-header h1{
+    font-size: 5rem;
+    color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.admin-header p{
+    font-size: 2.5rem;
+}
+
+.admin-linking-header h1{
+    font-size: 4rem;
+    color: colors.$gold;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.admin-linking-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.linking-area {
+    border: 0.05rem solid black;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+    width: 50%;
+}
+
+.linking-area h2{
+    font-size: 3rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.linking-area p{
+    font-size: 1.5rem;
+}
+
+.admin-button{
+    font-size: 1.5rem;
+    border-radius: 20px;
+    color: colors.$white;
+    font-family: 'Rajdhani', sans-serif;
+    background: colors.$dark-grey;
+    box-shadow: 5px 5px 10px black;
+    cursor: pointer;
+    transition: 200ms;
+    box-sizing: border-box;
+    font-weight: bold;
+    user-select: none;
+    touch-action: manipulation;
+    &:hover{
+        outline: 0;
+        background: colors.$gold;
+        color: colors.$black;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+    &:focus{
+        outline: 0;
+        background: colors.$gold;
+        color: colors.$black;
+        box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+    }
+}

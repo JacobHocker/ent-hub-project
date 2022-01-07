@@ -15,6 +15,7 @@ import ActorInformationDisplay from "./components/actors/actorInformationDisplay
 import DirectorInformationDisplay from "./components/directors/directorInformationDisplay/DirectorInformationDisplay";
 import GenreInformationDisplay from "./components/genres/genreInformationDisplay/GenreInformationDisplay";
 import UserProfileContainer from "./components/users/userProfileContainer/UserProfileContainer";
+import AdminLinking from "./components/adminLinking/AdminLinking";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="post" element={<PostContainer />} />
         <Route path="associate" element={<AssociatingContainer />} />
         <Route path="edit" element={<EditorContainer />} />
+        <Route path="admin" element={<AdminLinking />} />
         <Route path="users/:id" element={<UserProfileContainer user={user} />} />
       </Routes>
     </div>
